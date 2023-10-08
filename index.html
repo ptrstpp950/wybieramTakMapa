@@ -625,6 +625,39 @@
             path.parentElement.parentElement.setAttribute("viewBox", newX + " " + newY + " " + newWidth + " " + newHeight);
         }
 
+        function showAll(){
+            for (const key in window.dane) {
+                if (window.dane.hasOwnProperty(key)) {
+                    const element = window.dane[key];
+                    const svgElement = document.getElementById(element.nazwaOkregu + "Icon");
+                    svgElement.style.display = "block";
+                }
+            }
+        }
+        function hideNonNeibours(idOkregu){
+            var okreg = window.dane[idOkregu];
+            var neibourList = window.sasiedzi[okreg.nrOkregu];
+            for (const key in window.dane) {
+                if (window.dane.hasOwnProperty(key)) {
+                    const element = window.dane[key];
+                    if(element.nrOkregu != okreg.nrOkregu){
+                        var isNeibour = false;
+                        for (let i = 0; i <neibourList.length; i++) {
+                            const neibour = neibourList[i];
+                            if(neibour == element.nrOkregu){
+                                isNeibour = true;
+                                break;
+                            }
+                        }
+                        if(isNeibour == false){
+                            const svgElement = document.getElementById(element.nazwaOkregu + "Icon");
+                            svgElement.style.display = "none";
+                        }
+                    }
+                }
+            }
+        }
+
         //Get all the paths
         var paths = document.querySelectorAll("svg path");
         //For each path
@@ -634,8 +667,10 @@
             path.addEventListener("click", function (e) {
                 if(window.zoomState.zoomIn == false){
                     zoomOnPath(this);
+                    hideNonNeibours(this.parentElement.id.replace("Icon",""));
                 } else {
                     document.getElementById("svgMap").setAttribute("viewBox", 0 + " " + 0 + " " + window.zoomState.width + " " + window.zoomState.height);
+                    showAll();
                 }
                 window.zoomState.zoomIn = !window.zoomState.zoomIn;
             });
