@@ -136,7 +136,10 @@
 <body>
     <div>
         Chcę głosować w <span class="autocomplete" style="width:150px;">
-            <input id="nazwaOkreguInput" type="text" placeholder="okręgu">
+            <!--input id="nazwaOkreguInput" type="text" placeholder="okręgu"-->
+            <select id="nazwaOkreguSelect">
+                <option value="" selected>Cała Polska</option>
+            </select>
         </span> na partie:
     </div>
     <div class="pickerContainer">
@@ -483,121 +486,34 @@
         recalulateMap();
     </script>
 
+    
     <script>
-        function autocomplete(inp, arr) {
-            /*the autocomplete function takes two arguments,
-            the text field element and an array of possible autocompleted values:*/
-            var currentFocus;
-            /*execute a function when someone writes in the text field:*/
-            inp.addEventListener("input", function (e) {
-                var a, b, i, val = this.value;
-                /*close any already open lists of autocompleted values*/
-                closeAllLists();
-                if (!val) { return false; }
-                currentFocus = -1;
-                /*create a DIV element that will contain the items (values):*/
-                a = document.createElement("DIV");
-                a.setAttribute("id", this.id + "autocomplete-list");
-                a.setAttribute("class", "autocomplete-items");
-                /*append the DIV element as a child of the autocomplete container:*/
-                this.parentNode.appendChild(a);
-                /*for each item in the array...*/
-                for (i = 0; i < arr.length; i++) {
-                    /*check if the item starts with the same letters as the text field value:*/
-                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                        /*create a DIV element for each matching element:*/
-                        b = document.createElement("DIV");
-                        /*make the matching letters bold:*/
-                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                        b.innerHTML += arr[i].substr(val.length);
-                        /*insert a input field that will hold the current array item's value:*/
-                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                        /*execute a function when someone clicks on the item value (DIV element):*/
-                        b.addEventListener("click", function (e) {
-                            /*insert the value for the autocomplete text field:*/
-                            inp.value = this.getElementsByTagName("input")[0].value;
-                            /*close the list of autocompleted values,
-                            (or any other open lists of autocompleted values:*/
-                            closeAllLists();
-                        });
-                        a.appendChild(b);
-                    }
-                }
-            });
-            /*execute a function presses a key on the keyboard:*/
-            inp.addEventListener("keydown", function (e) {
-                var x = document.getElementById(this.id + "autocomplete-list");
-                if (x) x = x.getElementsByTagName("div");
-                if (e.keyCode == 40) {
-                    /*If the arrow DOWN key is pressed,
-                    increase the currentFocus variable:*/
-                    currentFocus++;
-                    /*and and make the current item more visible:*/
-                    addActive(x);
-                } else if (e.keyCode == 38) { //up
-                    /*If the arrow UP key is pressed,
-                    decrease the currentFocus variable:*/
-                    currentFocus--;
-                    /*and and make the current item more visible:*/
-                    addActive(x);
-                } else if (e.keyCode == 13) {
-                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
-                    e.preventDefault();
-                    if (currentFocus > -1) {
-                        /*and simulate a click on the "active" item:*/
-                        if (x) x[currentFocus].click();
-                    }
-                }
-            });
-            function addActive(x) {
-                /*a function to classify an item as "active":*/
-                if (!x) return false;
-                /*start by removing the "active" class on all items:*/
-                removeActive(x);
-                if (currentFocus >= x.length) currentFocus = 0;
-                if (currentFocus < 0) currentFocus = (x.length - 1);
-                /*add class "autocomplete-active":*/
-                x[currentFocus].classList.add("autocomplete-active");
-            }
-            function removeActive(x) {
-                /*a function to remove the "active" class from all autocomplete items:*/
-                for (var i = 0; i < x.length; i++) {
-                    x[i].classList.remove("autocomplete-active");
-                }
-            }
-            function closeAllLists(elmnt) {
-                /*close all autocomplete lists in the document,
-                except the one passed as an argument:*/
-                var x = document.getElementsByClassName("autocomplete-items");
-                for (var i = 0; i < x.length; i++) {
-                    if (elmnt != x[i] && elmnt != inp) {
-                        x[i].parentNode.removeChild(x[i]);
-                    }
-                }
-                //alert(inp.innerHTML);
-            }
-            /*execute a function when someone clicks in the document:*/
-            document.addEventListener("click", function (e) {
-                closeAllLists(e.target);
-            });
-        }
-
-        /*An array containing all the country names in the world:*/
         var list = [];
+        var select = document.getElementById('nazwaOkreguSelect');
         for (const key in window.dane) {
             if (window.dane.hasOwnProperty(key)) {
-                const element = window.dane[key];
-                list.push(element.nazwaOkregu);
+                list.push(key);
             }
         }
+        list = list.sort();
+        for(var i=0; i< list.length; i++) {
+            var opt = document.createElement('option');
+            var key = list[i];
+            const element = window.dane[key];
+            opt.value = key;
+            opt.innerHTML = element.nazwaOkregu;
+            select.appendChild(opt);
+        }
 
-        /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-        autocomplete(document.getElementById("nazwaOkreguInput"), list);
+        select.onchange = function() {
+            zoomFromInput(select.value);
+        }
+        
     </script>
     <script>
         // Zoom on path
         //When I click on the path, I want to zoom in on it and show only it
-        window.zoomState ={
+        window.zoomState = {
             width: 1000,
             height: 1000,
             zoomIn: false
@@ -628,7 +544,7 @@
             path.parentElement.parentElement.setAttribute("viewBox", newX + " " + newY + " " + newWidth + " " + newHeight);
         }
 
-        function showAll(){
+        function showAll() {
             for (const key in window.dane) {
                 if (window.dane.hasOwnProperty(key)) {
                     const element = window.dane[key];
@@ -637,31 +553,55 @@
                 }
             }
         }
-        function hideNonNeibours(idOkregu){
+        function hideNonNeibours(idOkregu) {
             var okreg = window.dane[idOkregu];
             var neibourList = window.sasiedzi[okreg.nrOkregu];
-            if(neibourList == null || neibourList == undefined){
+            if (neibourList == null || neibourList == undefined) {
                 return;
             }
             for (const key in window.dane) {
                 if (window.dane.hasOwnProperty(key)) {
                     const element = window.dane[key];
-                    if(element.nrOkregu != okreg.nrOkregu){
+                    if (element.nrOkregu != okreg.nrOkregu) {
                         var isNeibour = false;
-                        for (let i = 0; i <neibourList.length; i++) {
+                        for (let i = 0; i < neibourList.length; i++) {
                             const neibour = neibourList[i];
-                            if(neibour == element.nrOkregu){
+                            if (neibour == element.nrOkregu) {
                                 isNeibour = true;
                                 break;
                             }
                         }
-                        if(isNeibour == false){
+                        if (isNeibour == false) {
                             const svgElement = document.getElementById(element.nazwaOkregu + "Icon");
                             svgElement.style.display = "none";
                         }
                     }
                 }
             }
+        }
+
+        function zoomFromInput(inputValue) {
+            if(inputValue == null || inputValue == undefined || inputValue == "") {
+                resetZoom();
+                return;
+            }
+            if(window.zoomState.zoomIn == true )
+                resetZoom();
+            
+            if (window.dane[inputValue] != null) {
+                var parentElementToClick = document.getElementById(window.dane[inputValue].nazwaOkregu + "Icon");
+                if (parentElementToClick == null) {
+                    resetZoom();
+                    return;
+                }
+                parentElementToClick.getElementsByTagName("path")[0].dispatchEvent(new Event('click'));
+            }
+        }
+
+        function resetZoom() {
+            window.zoomState.zoomIn = false;
+            document.getElementById("svgMap").setAttribute("viewBox", 0 + " " + 0 + " " + window.zoomState.width + " " + window.zoomState.height);
+            showAll();
         }
 
         //Get all the paths
@@ -672,19 +612,18 @@
             var path = paths[i];
             //When I click on the path
             path.addEventListener("click", function (e) {
-                if(window.zoomState.zoomIn == false){
+                if (window.zoomState.zoomIn == false) {
                     zoomOnPath(this);
-                    hideNonNeibours(this.parentElement.id.replace("Icon",""));
+                    hideNonNeibours(this.parentElement.id.replace("Icon", ""));
                 } else {
-                    document.getElementById("svgMap").setAttribute("viewBox", 0 + " " + 0 + " " + window.zoomState.width + " " + window.zoomState.height);
-                    showAll();
+                    resetZoom();
                 }
                 window.zoomState.zoomIn = !window.zoomState.zoomIn;
             });
         }
-        for(var i=0; i < texts.length; i++) {
+        for (var i = 0; i < texts.length; i++) {
             var text = texts[i];
-            text.addEventListener("click", function(e) {
+            text.addEventListener("click", function (e) {
                 this.parentElement.getElementsByTagName("path")[0].dispatchEvent(new Event('click'));
             });
         }
