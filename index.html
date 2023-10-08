@@ -40,13 +40,27 @@
             top: 0;
             left: 0;
             width: 10%;
-            height: 10%;
         }
         .pickerContainer div {
             padding-bottom: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1.1;
+            display: grid;
+            grid-template-columns: 1em auto;
+            gap: 0.5em;
         }
+
         .pickerLogo {
-            width: 100%;
+            width: 100%; 
+        }
+        
+        .pickerCheckbox:not(:checked) ~ .pickerLogo {
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            filter: grayscale(100%);
         }
     </style>
     <script src="data.js"></script>
@@ -56,12 +70,15 @@
 <body>
     <div class="pickerContainer">
         <div id="koPicker">
+            <input id="koCheckbox" class="pickerCheckbox" type="checkbox" checked=""/>
             <img class="pickerLogo" src="img/ko.svg" />
         </div>
         <div id="lewicaPicker">
+            <input id="lewicaCheckbox" class="pickerCheckbox" type="checkbox" checked=""/>
             <img class="pickerLogo" src="img/lewica.svg" />
         </div>
         <div id="tdPicker">
+            <input id="tdCheckbox" class="pickerCheckbox" type="checkbox" checked=""/>
             <img class="pickerLogo" src="img/td.png" />
         </div>
     </div>
@@ -71,7 +88,7 @@
             <g>
                 <pattern id="bg-none" width="30" height="30" patternTransform="rotate(45 0 0)"
                     patternUnits="userSpaceOnUse">
-                    <rect width="30" height="30" class="ko-fill" stroke="none"></rect>
+                    <rect width="30" height="30" class="none-fill" stroke="none"></rect>
                 </pattern>
 
                 <pattern id="bg-ko" width="30" height="30" patternTransform="rotate(45 0 0)"
@@ -282,28 +299,69 @@
         </svg>
     </div>
     <script>
-        for (const key in window.dane) {
-          if (window.dane.hasOwnProperty(key)) {
-            const element = window.dane[key];
-            let rekomendacje = element.rekomendacjePartii;
-            const svgElement = document.getElementById(element.nazwaOkregu+"Icon");
-            if(svgElement === null || svgElement === undefined) {
-                console.log("brak elementu svg " + key);
-                continue;
+        function recalulateMap() {
+            for (const key in window.dane) {
+              if (window.dane.hasOwnProperty(key)) {
+                const element = window.dane[key];
+                let rekomendacje = element.rekomendacjePartii;
+                const svgElement = document.getElementById(element.nazwaOkregu+"Icon");
+                if(svgElement === null || svgElement === undefined) {
+                    console.log("brak elementu svg " + key);
+                    continue;
+                }
+                const pathElement = svgElement.querySelectorAll("path")[0];
+                if(rekomendacje === null || rekomendacje === undefined || rekomendacje.length === 0) {
+                    rekomendacje = [""];
+                }
+                if(rekomendacje[0] == "") {
+                    pathElement.setAttribute("fill", "url(#bg-none)");
+                } else {
+                    let style = "";
+                    rekomendacje = rekomendacje.sort();
+                    let styleArray = [];
+                    for(var i=0; i< rekomendacje.length; i++) {
+                        const current = rekomendacje[i].toLowerCase();
+                        if(window.party[current]===true)
+                            style += current + "-";
+                    }
+                    if(style === "") {
+                        style = "none-";
+                    }
+                    style=style.substring(0, style.length - 1);
+                    console.log("setting style "+style);
+                    //const result = rekomendacje.sort().join("-").toLowerCase();
+                    pathElement.setAttribute("fill", "url(#bg-"+style);
+                }
+              }
             }
-            const pathElement = svgElement.querySelectorAll("path")[0];
-            if(rekomendacje === null || rekomendacje === undefined || rekomendacje.length === 0) {
-                rekomendacje = [""];
-            }
-            if(rekomendacje[0] == "") {
-                pathElement.setAttribute("fill", "url(#none-fill)");
-            } else {
-                const result = rekomendacje.sort().join("-").toLowerCase();
-                pathElement.setAttribute("fill", "url(#bg-"+result);
-            }
+        };
+        // checkbox logic
+        window.party = {
+            ko: true,
+            lewica: true,
+            td: true,
+        }
+        for (const key in window.party) {
+          if (window.party.hasOwnProperty(key)) {
+            const party = key;
+            //console.log("processing party "+party);
+            const pickerCheckbox = document.querySelector('#'+party+'Picker input[type="checkbox"]');
+            const pickerDiv = document.querySelector('#'+party+'Picker');
+            //console.log(pickerCheckbox);
+            pickerDiv.addEventListener('click', function(event) {
+                if (event.target.tagName !== 'INPUT') {
+                    pickerCheckbox.checked = !pickerCheckbox.checked;
+                }
+                console.log(party + ' picker checkbox is '+ (pickerCheckbox.checked));
+                window.party[party] = pickerCheckbox.checked;
+                console.log(window.party);
+                recalulateMap();
+            });
           }
         }
+        recalulateMap();
     </script>
+
 </body>
 
 </html>
