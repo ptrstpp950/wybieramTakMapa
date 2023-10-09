@@ -8,7 +8,7 @@
     <?php
         $page_url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         
-        $image_url = 'https://wybieramtak-og-image.azurewebsites.net/screenshot?url=' . urldecode($page_url);
+        $image_url = 'https://wybieramtak-og-image.azurewebsites.net/screenshot?url=' . urlencode($page_url);
     ?>
     <meta property="og:image" content="<?php echo $image_url; ?>" />
     <meta property="og:locale" content="pl_PL">
