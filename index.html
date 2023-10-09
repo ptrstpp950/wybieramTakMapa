@@ -74,7 +74,7 @@
         }
 
         .pickerLogo {
-            width: 75%;
+            width: 150px;
         }
 
         .pickerCheckbox:not(:checked)~.pickerLogo {
@@ -113,7 +113,7 @@
         }
 
         body {
-            display: flex; 
+            display: flex;
         }
 
         /* Style for the parent element */
@@ -142,6 +142,30 @@
 
         /* Media query for screen sizes less than 600px */
         @media (max-width: 900px) {
+            .pickerLogo {
+                width: 150px;
+            }
+
+            .left-column {
+                width: 100%;
+                padding: 0;
+            }
+
+            .pickerContainer {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .pickerContainer h1 {
+                width: 100%;
+            }
+
+            .pickerContainer div {
+                width: 200px;
+                display: grid;
+            }
+
 
 
             /* Change the flex direction to column */
@@ -176,26 +200,30 @@
     <div class="content">
         <div>
             <div class="parent-element">
-                <div class="pickerContainer left-column">
+                <div class="left-column">
                     <h1>
-                        Chcę głosować w <span class="autocomplete" style="width:150px;">
+                        <span>Chcę głosowa w</span>
+                        <span class="autocomplete" style="width:150px;">
                             <!--input id="nazwaOkreguInput" type="text" placeholder="okręgu"-->
                             <select id="nazwaOkreguSelect" title="Wybór okręgu">
                                 <option value="" selected>Cała Polska</option>
                             </select>
-                        </span><br />na partie:
+                        </span><br />
+                        <span>na partie:</span>
                     </h1>
-                    <div id="koPicker">
-                        <input id="koCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
-                        <img class="pickerLogo" src="img/ko.svg" />
-                    </div>
-                    <div id="lewicaPicker">
-                        <input id="lewicaCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
-                        <img class="pickerLogo" src="img/lewica.svg" />
-                    </div>
-                    <div id="tdPicker">
-                        <input id="tdCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
-                        <img class="pickerLogo" src="img/td.png" />
+                    <div class="pickerContainer">
+                        <div id="koPicker">
+                            <input id="koCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
+                            <img class="pickerLogo" src="img/ko.svg" />
+                        </div>
+                        <div id="lewicaPicker">
+                            <input id="lewicaCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
+                            <img class="pickerLogo" src="img/lewica.svg" />
+                        </div>
+                        <div id="tdPicker">
+                            <input id="tdCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
+                            <img class="pickerLogo" src="img/td.png" />
+                        </div>
                     </div>
                 </div>
                 <div class="map right-column">
@@ -642,19 +670,19 @@
             var queryString = "?v1";
             const element = document.getElementById("nazwaOkreguSelect");
             let okreg = element.value;
-            
-            if(okreg == null || okreg == undefined){
+
+            if (okreg == null || okreg == undefined) {
                 okreg = "";
             }
-            
-            queryString += okreg!=""?"&okreg="+okreg:"";
-            queryString += window.party.ko?"":"&ko=0";
-            queryString += window.party.lewica?"":"&lewica=0";
-            queryString += window.party.td?"":"&td=0";
+
+            queryString += okreg != "" ? "&okreg=" + okreg : "";
+            queryString += window.party.ko ? "" : "&ko=0";
+            queryString += window.party.lewica ? "" : "&lewica=0";
+            queryString += window.party.td ? "" : "&td=0";
 
             window.history.pushState("", "", queryString);
         }
-        
+
 
         function selectElement(id, valueToSelect) {
             let element = document.getElementById(id);
@@ -706,9 +734,9 @@
             }
 
         }
-    
 
-        function readState(){
+
+        function readState() {
             var urlParams = new URLSearchParams(window.location.search);
             var okreg = urlParams.get('okreg');
             var ko = urlParams.get('ko');
