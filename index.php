@@ -6,7 +6,7 @@
     <title>WybieramTak - Łaczymy głosy</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
     <?php
-        $page_url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']
+        $page_url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         
         $image_url = 'https://wybieramtak-og-image.azurewebsites.net/screenshot?url=' . urldecode($page_url);
     ?>
