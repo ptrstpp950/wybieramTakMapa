@@ -643,10 +643,11 @@
             var queryString = "?v1";
             const element = document.getElementById("nazwaOkreguSelect");
             let okreg = element.value;
-            debugger;
+            
             if(okreg == null || okreg == undefined){
                 okreg = "";
             }
+            
             queryString += okreg!=""?"&okreg="+okreg:"";
             queryString += window.party.ko?"":"&ko=0";
             queryString += window.party.lewica?"":"&lewica=0";
@@ -706,8 +707,7 @@
             }
 
         }
-
-        setSuggestion("");
+    
 
         function readState(){
             var urlParams = new URLSearchParams(window.location.search);
@@ -715,18 +715,16 @@
             var ko = urlParams.get('ko');
             var lewica = urlParams.get('lewica');
             var td = urlParams.get('td');
-            if(okreg != null && okreg != undefined){
-                selectElement("nazwaOkreguSelect", okreg);
-            }
+
             window.party.ko = (ko != "0");
-            window.party.lewica = (ko != "0");
-            window.party.td = (ko != "0");
+            window.party.lewica = (lewica != "0");
+            window.party.td = (td != "0");
 
             document.getElementById("koCheckbox").checked = window.party.ko;
             document.getElementById("lewicaCheckbox").checked = window.party.lewica;
             document.getElementById("tdCheckbox").checked = window.party.td;
-            recalulateMap();
-            
+
+            zoomFromInput(okreg);
         }
         readState();
 
