@@ -139,6 +139,7 @@
             padding: 20px;
             box-sizing: border-box;
             width: 600px;
+            height: 600px;
         }
 
         /* Media query for screen sizes less than 600px */
@@ -517,6 +518,7 @@
                     txtElement.setAttribute("class", txtStyle);
                 }
             }
+            setState();
         };
         // checkbox logic
         window.party = {
@@ -637,9 +639,27 @@
             }
         }
 
+        function setState(){
+            var queryString = "?v1";
+            const element = document.getElementById("nazwaOkreguSelect");
+            let okreg = element.value;
+            debugger;
+            if(okreg == null || okreg == undefined){
+                okreg = "";
+            }
+            queryString += okreg!=""?"&okreg="+okreg:"";
+            queryString += window.party.ko?"&ko=1":"";
+            queryString += window.party.lewica?"&lewica=1":"";
+            queryString += window.party.td?"&td=1":"";
+
+            window.history.pushState("", "", queryString);
+        }
+        
+
         function selectElement(id, valueToSelect) {
             let element = document.getElementById(id);
             element.value = valueToSelect;
+            setState();
         }
 
         function zoomFromInput(inputValue) {
@@ -688,6 +708,39 @@
         }
 
         setSuggestion("");
+
+        function readState(){
+            var urlParams = new URLSearchParams(window.location.search);
+            var okreg = urlParams.get('okreg');
+            var ko = urlParams.get('ko');
+            var lewica = urlParams.get('lewica');
+            var td = urlParams.get('td');
+            if(okreg != null && okreg != undefined){
+                selectElement("nazwaOkreguSelect", okreg);
+            }
+            if(ko != null && ko != undefined){
+                window.party.ko = true;
+            } else {
+                window.party.ko = false;
+            }
+            if(lewica != null && lewica != undefined){
+                window.party.lewica = true;
+            } else {
+                window.party.lewica = false;
+            }
+            if(td != null && td != undefined){
+                window.party.td = true;
+            } else {
+                window.party.td = false;
+            }
+
+            document.getElementById("koCheckbox").checked = window.party.ko;
+            document.getElementById("lewicaCheckbox").checked = window.party.lewica;
+            document.getElementById("tdCheckbox").checked = window.party.td;
+            recalulateMap();
+            
+        }
+        readState();
 
 
         //Get all the paths
