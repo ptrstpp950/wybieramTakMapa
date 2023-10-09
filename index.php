@@ -6,17 +6,9 @@
     <title>WybieramTak - Łaczymy głosy</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
     <?php
-        $page_url = "http";
-        if(isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] === "on") {
-            $page_url .= "s";
-        }
-        $page_url .= "://";
-        if($_SERVER["SERVER_PORT"] != "80") {
-            $page_url .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
-        } else {
-            $page_url .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-        }
-        $image_url = 'https://wybieramtak-og-image.azurewebsites.net/' . urldecode($page_url);
+        $page_url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']
+        
+        $image_url = 'https://wybieramtak-og-image.azurewebsites.net/screenshot?url=' . urldecode($page_url);
     ?>
     <meta property="og:image" content="<?php echo $image_url; ?>" />
     <meta property="og:locale" content="pl_PL">
