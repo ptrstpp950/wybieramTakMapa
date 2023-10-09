@@ -639,7 +639,7 @@
             }
         }
 
-        function setState(){
+        function setState() {
             var queryString = "?v1";
             const element = document.getElementById("nazwaOkreguSelect");
             let okreg = element.value;
@@ -648,9 +648,9 @@
                 okreg = "";
             }
             queryString += okreg!=""?"&okreg="+okreg:"";
-            queryString += window.party.ko?"&ko=1":"";
-            queryString += window.party.lewica?"&lewica=1":"";
-            queryString += window.party.td?"&td=1":"";
+            queryString += window.party.ko?"":"&ko=0";
+            queryString += window.party.lewica?"":"&lewica=0";
+            queryString += window.party.td?"":"&td=0";
 
             window.history.pushState("", "", queryString);
         }
@@ -718,21 +718,9 @@
             if(okreg != null && okreg != undefined){
                 selectElement("nazwaOkreguSelect", okreg);
             }
-            if(ko != null && ko != undefined){
-                window.party.ko = true;
-            } else {
-                window.party.ko = false;
-            }
-            if(lewica != null && lewica != undefined){
-                window.party.lewica = true;
-            } else {
-                window.party.lewica = false;
-            }
-            if(td != null && td != undefined){
-                window.party.td = true;
-            } else {
-                window.party.td = false;
-            }
+            window.party.ko = (ko != "0");
+            window.party.lewica = (ko != "0");
+            window.party.td = (ko != "0");
 
             document.getElementById("koCheckbox").checked = window.party.ko;
             document.getElementById("lewicaCheckbox").checked = window.party.lewica;
