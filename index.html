@@ -112,10 +112,6 @@
             height: 100%;
         }
 
-        body {
-            display: flex;
-        }
-
         /* Style for the parent element */
         .parent-element {
             display: flex;
@@ -140,8 +136,15 @@
             height: 600px;
         }
 
-        /* Media query for screen sizes less than 600px */
-        @media (max-width: 900px) {
+        @media (min-width: 900px) {
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        /* Media query for screen sizes less than 900px */
+        @media (max-width: 899px) {
             .pickerLogo {
                 width: 150px;
             }
