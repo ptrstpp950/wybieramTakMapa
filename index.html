@@ -1,6 +1,15 @@
-<html>
+<html lang="pl">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WybieramTak - Łaczymy głosy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <style>
+        body {
+            font-family: 'Archivo', serif;
+        }
+    </style>
     <style>
         svg.map {
             fill: #ddd;
@@ -26,7 +35,7 @@
 
 
         .none-fill {
-            fill: pink;
+            fill: white;
         }
 
         .lewica-fill {
@@ -65,7 +74,7 @@
         }
 
         .pickerLogo {
-            width: 100%;
+            width: 75%;
         }
 
         .pickerCheckbox:not(:checked)~.pickerLogo {
@@ -75,8 +84,40 @@
             -ms-filter: grayscale(100%);
             filter: grayscale(100%);
         }
+
+        #nazwaOkreguSelect {
+            font-size: inherit;
+            font-family: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            border-style: dashed;
+        }
+
+        #nazwaOkreguSelect option {
+            font-weight: inherit;
+        }
+
+        .recommendation {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
     </style>
     <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         /* Style for the parent element */
         .parent-element {
             display: flex;
@@ -86,9 +127,10 @@
 
         /* Style for the left column */
         .left-column {
-            width: 200px;
             padding: 20px;
             box-sizing: border-box;
+            width: 300px;
+            z-index: 1;
         }
 
         /* Style for the right column */
@@ -96,17 +138,26 @@
             flex: 1;
             padding: 20px;
             box-sizing: border-box;
+            width: 600px;
+        }
+
+        /* Media query for screen sizes less than 600px */
+        @media (max-width: 600px) {
+
+            /* Change the flex direction to column */
+            .parent-element {
+                flex-direction: column;
+            }
+
+            /* Reset the width of the right column */
+            .right-column {
+                width: 100%;
+            }
         }
 
         /* Style for the checkboxes */
         .checkbox {
             margin-bottom: 10px;
-        }
-
-        /* Style for the SVG image */
-        .svg-image {
-            width: 100%;
-            height: auto;
         }
 
         /* Style for the text at the bottom */
@@ -122,17 +173,18 @@
 </head>
 
 <body>
-    <h1>
-        Chcę głosować w <span class="autocomplete" style="width:150px;">
-            <!--input id="nazwaOkreguInput" type="text" placeholder="okręgu"-->
-            <select id="nazwaOkreguSelect">
-                <option value="" selected>Cała Polska</option>
-            </select>
-        </span> na partie:
-    </h1>
-    <div>
+    <div class="content">
+        <div>
             <div class="parent-element">
-                <div class="pickerContainer left-column" style="width: 200px;">
+                <div class="pickerContainer left-column">
+                    <h1>
+                        Chcę głosować w <span class="autocomplete" style="width:150px;">
+                            <!--input id="nazwaOkreguInput" type="text" placeholder="okręgu"-->
+                            <select id="nazwaOkreguSelect" title="Wybór okręgu">
+                                <option value="" selected>Cała Polska</option>
+                            </select>
+                        </span><br />na partie:
+                    </h1>
                     <div id="koPicker">
                         <input id="koCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
                         <img class="pickerLogo" src="img/ko.svg" />
@@ -146,7 +198,7 @@
                         <img class="pickerLogo" src="img/td.png" />
                     </div>
                 </div>
-                <div class="map right-column" style="width: 600px;">
+                <div class="map right-column">
                     <svg id="svgMap" class="map" version="1.1" viewBox="0 0 1000 1000" style="display: inline;"
                         width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -407,12 +459,21 @@
                     </svg>
                 </div>
             </div>
-    </div>
-    <div>
-        <div></div>
+        </div>
         <h2 id="suggestion"></h2>
+        <div>
+            <div class="recommendation">Rekomendacje z dnia 05.10</div>
+            <div class="recommendation">Aktualne dane na WybierzTak.pl</div>
+            <div class="recommendation">&nbsp;</div>
+        </div>
+        <div>
+            <div class="recommendation">Okręg 20: KO walczy z PIS o piąty mandat</div>
+            <div class="recommendation">Okręg 19: Lewica walczy o trzeci mandat, Trzecia Droga - o drugi</div>
+            <div class="recommendation">Okręg 16,17,18: tu Twój głos odddany na dekokratyczną opozycję liczy się
+                podwójnie
+            </div>
+        </div>
     </div>
-
     <script>
         function recalulateMap() {
             for (const key in window.dane) {
@@ -585,8 +646,6 @@
             if (inputValue == null || inputValue == undefined)
                 inputValue = "";
 
-            selectElement("nazwaOkreguSelect", inputValue);
-
             if (inputValue == "") {
                 resetZoom();
                 return;
@@ -595,6 +654,7 @@
             if (window.zoomState.zoomIn == true)
                 resetZoom();
 
+            selectElement("nazwaOkreguSelect", inputValue);
             window.zoomState.zoomIn = true;
             if (window.dane[inputValue] != null) {
                 var parentElementToClick = document.getElementById(window.dane[inputValue].nazwaOkregu + "Icon");
