@@ -194,8 +194,8 @@
         /* Style for the right column */
         .right-column {
             flex: 1;
-            width: 600px;
-            height: 600px;
+            width: 550px;
+            height: 550px;
         }
 
 
@@ -204,9 +204,17 @@
             margin-bottom: 10px;
         }
 
-        .recommendation {
+        .recommendations {
+            margin-bottom: 20px;
+        }
+
+        .recommendations p {
             font-size: 1.25em;
-            margin-bottom: 1em;
+            margin-bottom: 0.25em;
+        }
+
+        .bottom-info p {
+
         }
     </style>
 
@@ -242,6 +250,12 @@
             -o-filter: grayscale(100%);
             -ms-filter: grayscale(100%);
             filter: grayscale(100%);
+        }
+
+        h1 {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 5px;
         }
 
         #nazwaOkreguSelect {
@@ -312,22 +326,39 @@
     <style>
         /* Media query for screen sizes less than 900px */
         @media (max-width: 899px) {
+            main {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .pickerContainer {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .pickerContainer div {
+                font-size: 1em;
+            }
+
+            .pickerLogo {
+                width: 70px;
+            }
+
             /* Change the flex direction to column */
             .parent-element {
                 flex-direction: column;
             }
 
-            /* Reset the width of columns */
-            .left-column,
-            .right-column {
+            .right-column,
+            .left-column {
                 width: 100%;
-            }
-        }
-
-        /* Media query for screen sizes less than 900px and more than 700px */
-        @media (max-width: 899px) and (min-width: 700px) {
-            .pickerContainer {
-                flex-direction: row;
             }
         }
 
@@ -348,7 +379,7 @@
                             <select id="nazwaOkreguSelect" title="Wybór okręgu">
                                 <option value="" selected>Cała Polska</option>
                             </select>
-                        </span><br />
+                        </span>
                         <span>na partie:</span>
                     </h1>
                     <div class="pickerContainer">
@@ -629,17 +660,14 @@
             </div>
         </section>
         <h2 id="suggestion"></h2>
-        <section>
-            <p class="recommendation">Rekomendacje z dnia 05.10</p>
-            <p class="recommendation">Aktualne dane na WybierzTak.pl</p>
-            <p class="recommendation">&nbsp;</p>
-        </section>
-        <section>
+        <section class="recommendations">
             <p class="recommendation">Okręg 20: KO walczy z PIS o piąty mandat</p>
             <p class="recommendation">Okręg 19: Lewica walczy o trzeci mandat, Trzecia Droga - o drugi</p>
-            <p class="recommendation">Okręg 16,17,18: tu Twój głos odddany na dekokratyczną opozycję liczy się
-                podwójnie
-            </p>
+            <p class="recommendation">Okręg 16,17,18: tu Twój głos odddany na dekokratyczną opozycję liczy się podwójnie</p>
+        </section>
+        <section class="bottom-info">
+            <p>Rekomendacje z dnia 05.10</p>
+            <p>Aktualne dane na <a href="https://wybierztak.pl/" target="_blank">WybierzTak.pl</a></p>
         </section>
     </div>
     <script>
