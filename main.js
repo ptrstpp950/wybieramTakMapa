@@ -98,7 +98,8 @@ select.onchange = function () {
 window.zoomState = {
     width: 1000,
     height: 1000,
-    zoomIn: false
+    zoomIn: false,
+    zoomElem: null,
 }
 function zoomOnPath(path) {
     //Get the bounding box of the path
@@ -198,6 +199,7 @@ function zoomFromInput(inputValue) {
     if (window.zoomState.zoomIn == true)
         resetZoom();
     
+    window.zoomState.zoomElem = inputValue;
     selectElement("nazwaOkreguSelect", inputValue);
     
     window.zoomState.zoomIn = true;
@@ -224,7 +226,7 @@ function resetZoom() {
 
 function setSuggestion(txt, nazwaOkregu) {
     if (txt == null || txt == undefined || txt == "") {
-        document.getElementById("suggestion").innerHTML = "";
+        document.getElementById("suggestion").innerHTML = nazwaOkregu + ": " + "Brak aktualnych rekomendacji strategicznych. Sprawdź rekomendacje przed wyborami.";
         return;
     } else {
         document.getElementById("suggestion").innerHTML = nazwaOkregu + ": " + txt;
@@ -262,8 +264,10 @@ for (var i = 0; i < paths.length; i++) {
     var path = paths[i];
     //When I click on the path
     path.addEventListener("click", function (e) {
+        var idOkregu = this.parentElement.id.replace("Icon", "");
         if (window.zoomState.zoomIn == false) {
-            var idOkregu = this.parentElement.id.replace("Icon", "");
+            zoomFromInput(idOkregu);
+        } else if (window.zoomState.zoomElem != idOkregu) {
             zoomFromInput(idOkregu);
         } else {
             resetZoom();

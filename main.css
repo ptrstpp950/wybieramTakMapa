@@ -270,6 +270,12 @@ svg.map {
 svg.map path {
     stroke: #b0b0b0;
 }
+svg.map path:hover {
+    stroke: black;
+    stroke-width: 4px;
+    filter: 
+        saturate(1.2);
+}
 
 .txtWhite {
     stroke: none;
