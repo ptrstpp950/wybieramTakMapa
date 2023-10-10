@@ -64,10 +64,10 @@ for (const key in window.party) {
             window.party[party] = pickerCheckbox.checked;
             console.log(window.party);
             recalulateMap();
+            setState();
         });
     }
 }
-recalulateMap();
 
 
 var list = [];
