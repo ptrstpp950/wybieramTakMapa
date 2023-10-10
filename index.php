@@ -377,7 +377,7 @@
         }
 
     </style>
-    <script src="data.js"></script>
+    <script src="data.js?20231010"></script>
 
 </head>
 
@@ -680,7 +680,7 @@
             <p class="recommendation">Okręg 16,17,18: tu Twój głos odddany na dekokratyczną opozycję liczy się podwójnie</p>
         </section>
         <section class="bottom-info">
-            <p>Rekomendacje z dnia 05.10</p>
+            <p>Rekomendacje z dnia 10.10</p>
             <p>Aktualne dane na <a href="https://wybierztak.pl/" target="_blank">WybierzTak.pl</a></p>
         </section>
     </div>

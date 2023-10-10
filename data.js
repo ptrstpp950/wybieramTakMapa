@@ -37,10 +37,7 @@ window.dane = {
     },
     "Łódź": {
         "nazwaOkregu": "Łódź",
-        "nrOkregu": 9,
-        "rekomendacjePartii": [
-            "LEWICA"
-        ]
+        "nrOkregu": 9
     },
     "Piotrków Trybunalski": {
         "nazwaOkregu": "Piotrków Trybunalski",
@@ -48,42 +45,41 @@ window.dane = {
     },
     "Sieradz": {
         "nazwaOkregu": "Sieradz",
-        "nrOkregu": 11
+        "nrOkregu": 11,
+        "rekomendacjePartii": [ 
+            "KO"
+        ]
     },
     "Chrzanów": {
         "nazwaOkregu": "Chrzanów",
         "nrOkregu": 12,
         "rekomendacjePartii": [
+            "KO",
             "TD"
         ]
     },
     "Kraków": {
         "nazwaOkregu": "Kraków",
-        "nrOkregu": 13,
-        "rekomendacjePartii": [
-            "KO",
-            "LEWICA"
-        ]
+        "nrOkregu": 13
     },
     "Nowy Sącz": {
         "nazwaOkregu": "Nowy Sącz",
-        "nrOkregu": 14,
-        "rekomendacjePartii": [
-            "TD"
-        ]
+        "nrOkregu": 14
     },
     "Tarnów": {
         "nazwaOkregu": "Tarnów",
         "nrOkregu": 15,
         "rekomendacjePartii": [
-            "KO"
+            "KO",
+            "TD"
         ]
     },
     "Płock": {
         "nazwaOkregu": "Płock",
         "nrOkregu": 16,
         "rekomendacjePartii": [
-            "LEWICA"
+            "LEWICA",
+            "TD"
         ]
     },
     "Radom": {
@@ -92,17 +88,11 @@ window.dane = {
     },
     "Siedlce": {
         "nazwaOkregu": "Siedlce",
-        "nrOkregu": 18,
-        "rekomendacjePartii": [
-            ""
-        ]
+        "nrOkregu": 18
     },
     "Warszawa I": {
         "nazwaOkregu": "Warszawa I",
-        "nrOkregu": 19,
-        "rekomendacjePartii": [
-            "KO"
-        ]
+        "nrOkregu": 19
     },
     "Warszawa II": {
         "nazwaOkregu": "Warszawa II",
@@ -117,59 +107,42 @@ window.dane = {
     },
     "Krosno": {
         "nazwaOkregu": "Krosno",
-        "nrOkregu": 22,
-        "rekomendacjePartii": [
-            "TD"
-        ]
+        "nrOkregu": 22
     },
     "Rzeszów": {
         "nazwaOkregu": "Rzeszów",
-        "nrOkregu": 23,
-        "rekomendacjePartii": [
-            "KO",
-            "LEWICA"
-        ]
+        "nrOkregu": 23
     },
     "Białystok": {
         "nazwaOkregu": "Białystok",
-        "nrOkregu": 24,
-        "rekomendacjePartii": [
-            "KO",
-            "TD"
-        ]
+        "nrOkregu": 24
     },
     "Gdańsk": {
         "nazwaOkregu": "Gdańsk",
         "nrOkregu": 25,
         "rekomendacjePartii": [
-            ""
+            "KO"
         ]
     },
     "Gdynia": {
         "nazwaOkregu": "Gdynia",
-        "nrOkregu": 26,
+        "nrOkregu": 26
+    },
+    "Bielsko-Biała": {
+        "nazwaOkregu": "Bielsko-Biała",
+        "nrOkregu": 27,
         "rekomendacjePartii": [
             "LEWICA",
             "TD"
         ]
     },
-    "Bielsko-Biała": {
-        "nazwaOkregu": "Bielsko-Biała",
-        "nrOkregu": 27
-    },
     "Częstochowa": {
         "nazwaOkregu": "Częstochowa",
-        "nrOkregu": 28,
-        "rekomendacjePartii": [
-            "TD"
-        ]
+        "nrOkregu": 28
     },
     "Gliwice": {
         "nazwaOkregu": "Gliwice",
-        "nrOkregu": 29,
-        "rekomendacjePartii": [
-            "KO"
-        ]
+        "nrOkregu": 29
     },
     "Rybnik": {
         "nazwaOkregu": "Rybnik",
@@ -191,7 +164,8 @@ window.dane = {
         "nazwaOkregu": "Elbląg",
         "nrOkregu": 34,
         "rekomendacjePartii": [
-            "LEWICA"
+            "LEWICA",
+            "TD"
         ]
     },
     "Olsztyn": {
@@ -211,31 +185,23 @@ window.dane = {
     },
     "Piła": {
         "nazwaOkregu": "Piła",
-        "nrOkregu": 38,
-        "rekomendacjePartii": [
-            "KO"
-        ]
+        "nrOkregu": 38
     },
     "Poznań": {
         "nazwaOkregu": "Poznań",
-        "nrOkregu": 39,
-        "rekomendacjePartii": [
-            "KO"
-        ]
+        "nrOkregu": 39
     },
     "Koszalin": {
         "nazwaOkregu": "Koszalin",
         "nrOkregu": 40,
         "rekomendacjePartii": [
-            ""
+            "KO",
+            "TD"
         ]
     },
     "Szczecin": {
         "nazwaOkregu": "Szczecin",
-        "nrOkregu": 41,
-        "rekomendacjePartii": [
-            ""
-        ]
+        "nrOkregu": 41
     }
 }
 
