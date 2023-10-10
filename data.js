@@ -1,15 +1,26 @@
 window.dane = {
     "Legnica": {
         "nazwaOkregu": "Legnica",
-        "nrOkregu": 1
+        "nrOkregu": 1,
+        "rekomendacjePartii": [
+            "KO",
+            "LEWICA"
+        ]
     },
     "Wałbrzych": {
         "nazwaOkregu": "Wałbrzych",
-        "nrOkregu": 2
+        "nrOkregu": 2,
+        "rekomendacjePartii": [
+            "TD"
+        ]
     },
     "Wrocław": {
         "nazwaOkregu": "Wrocław",
-        "nrOkregu": 3
+        "nrOkregu": 3,
+        "rekomendacjePartii": [
+            "KO",
+            "LEWICA"
+        ]
     },
     "Bydgoszcz": {
         "nazwaOkregu": "Bydgoszcz",
@@ -33,7 +44,10 @@ window.dane = {
     },
     "Zielona Góra": {
         "nazwaOkregu": "Zielona Góra",
-        "nrOkregu": 8
+        "nrOkregu": 8,
+        "rekomendacjePartii": [
+            "LEWICA"
+        ]
     },
     "Łódź": {
         "nazwaOkregu": "Łódź",
@@ -46,7 +60,7 @@ window.dane = {
     "Sieradz": {
         "nazwaOkregu": "Sieradz",
         "nrOkregu": 11,
-        "rekomendacjePartii": [ 
+        "rekomendacjePartii": [
             "KO"
         ]
     },
@@ -84,7 +98,10 @@ window.dane = {
     },
     "Radom": {
         "nazwaOkregu": "Radom",
-        "nrOkregu": 17
+        "nrOkregu": 17,
+        "rekomendacjePartii": [
+            "TD"
+        ]
     },
     "Siedlce": {
         "nazwaOkregu": "Siedlce",
@@ -174,7 +191,10 @@ window.dane = {
     },
     "Kalisz": {
         "nazwaOkregu": "Kalisz",
-        "nrOkregu": 36
+        "nrOkregu": 36,
+        "rekomendacjePartii": [
+//            "BIAŁY"
+        ]
     },
     "Konin": {
         "nazwaOkregu": "Konin",
@@ -185,25 +205,34 @@ window.dane = {
     },
     "Piła": {
         "nazwaOkregu": "Piła",
-        "nrOkregu": 38
+        "nrOkregu": 38,
+        "rekomendacjePartii": [
+            "KO"
+        ]
     },
     "Poznań": {
         "nazwaOkregu": "Poznań",
-        "nrOkregu": 39
+        "nrOkregu": 39,
+        "rekomendacjePartii": [
+            "KO"
+        ]
     },
     "Koszalin": {
         "nazwaOkregu": "Koszalin",
         "nrOkregu": 40,
         "rekomendacjePartii": [
-            "KO",
             "TD"
         ]
     },
     "Szczecin": {
         "nazwaOkregu": "Szczecin",
-        "nrOkregu": 41
+        "nrOkregu": 41,
+        "rekomendacjePartii": [
+            "KO"
+        ]
     }
 }
+
 
 
 window.sasiedzi = {
