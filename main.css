@@ -380,3 +380,7 @@ h1.beforeMap {
 h2.recommendation {
     font-weight: inherit;
 }
+
+b.bold {
+    font-weight: bold;
+}

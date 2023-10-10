@@ -225,11 +225,12 @@ function resetZoom() {
 }
 
 function setSuggestion(txt, nazwaOkregu) {
+    const nazwaOkreguHtml = '<b class="bold">'+nazwaOkregu+"</b>";
     if (txt == null || txt == undefined || txt == "") {
-        document.getElementById("suggestion").innerHTML = nazwaOkregu + ": " + "Brak aktualnych rekomendacji strategicznych. Sprawdź rekomendacje przed wyborami.";
+        document.getElementById("suggestion").innerHTML = nazwaOkreguHtml + ": " + "Brak aktualnych rekomendacji strategicznych. Sprawdź rekomendacje przed wyborami.";
         return;
     } else {
-        document.getElementById("suggestion").innerHTML = nazwaOkregu + ": " + txt;
+        document.getElementById("suggestion").innerHTML = nazwaOkreguHtml + ": " + txt;
     }
 
 }
