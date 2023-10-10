@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: cp index.html index.php
+      - run: mv index.html index.php
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
