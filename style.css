@@ -1,0 +1,356 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v5.0.2 | 20191019
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+    display: none;
+}
+body {
+    line-height: 1;
+}
+menu, ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+:root {
+    --form-control-background: #0d6efd;
+    --form-control-color: #fff;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+option,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+    padding-left: 5px;
+    border-radius: 0;
+}
+
+/* inspiration: https://moderncss.dev/pure-css-custom-checkbox-style/ */
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+
+    font: inherit;
+    color: currentColor;
+    width: 1em;
+    height: 1em;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--form-control-background);
+    border: 1px solid var(--form-control-background);
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #fff;
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Archivo', serif;
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bolder;
+    margin-bottom: 0.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 0.25em;
+}
+
+
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Style for the parent element */
+.parent-element {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1000px;
+}
+
+/* Style for the left column */
+.left-column {
+    width: 300px;
+    z-index: 1;
+}
+
+/* Style for the right column */
+.right-column {
+    flex: 1;
+    width: 550px;
+    height: 550px;
+}
+
+
+/* Style for the checkboxes */
+.checkbox {
+    margin-bottom: 10px;
+}
+
+.recommendations {
+    margin-bottom: 20px;
+}
+
+.recommendations p {
+    font-size: 1.25em;
+    margin-bottom: 0.25em;
+}
+
+.bottom-info p {
+
+}
+
+
+
+.pickerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pickerContainer div {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.pickerCheckbox {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 1em;
+}
+
+.pickerLogo {
+    width: 150px;
+}
+
+.pickerCheckbox:not(:checked)~.pickerLogo {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+}
+
+#nazwaOkreguSelect {
+    width: 250px;
+    font-weight: inherit;
+    border-style: dashed;
+}
+
+#nazwaOkreguSelect option {
+    font-size: smaller;
+}
+
+
+
+svg.map {
+    fill: #ddd;
+}
+
+svg.map path {
+    stroke: #b0b0b0;
+}
+
+.txtWhite {
+    stroke: none;
+    fill: #fff;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.txtBlack {
+    stroke: none;
+    fill: #131010;
+    font-size: large;
+    font-weight: bolder;
+}
+
+
+.none-fill {
+    fill: white;
+}
+
+.lewica-fill {
+    fill: #A71256
+}
+
+.ko-fill {
+    fill: #02468F
+}
+
+.td-fill {
+    fill: #3CB035
+}
+
+.lewica-stroke {
+    stroke: #A71256
+}
+
+.ko-stroke {
+    stroke: #02468F
+}
+
+.td-stroke {
+    stroke: #3CB035
+}
+
+
+
+/* Media query for screen sizes less than 900px */
+@media (max-width: 899px) {
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .pickerContainer {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .pickerContainer div {
+        font-size: 1em;
+    }
+
+    .pickerLogo {
+        width: 70px;
+    }
+
+    /* Change the flex direction to column */
+    .parent-element {
+        flex-direction: column;
+    }
+
+    .right-column,
+    .left-column {
+        width: 100%;
+    }
+}
+
