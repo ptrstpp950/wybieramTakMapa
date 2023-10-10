@@ -24,6 +24,6 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password:  ${{ secrets.FTP_PASSWORD }}
           dry-run: true
-          remote-dir: /domains/wybierztak.pl/public_html/
+          server-dir: /domains/wybierztak.pl/public_html/
       - name: 🚀 Success
         run: cat ./.ftp-deploy-sync-state.json
