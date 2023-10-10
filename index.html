@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>WybieramTak - Łaczymy głosy</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <!--
+    <?php
+        $page_url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        
+        $image_url = 'https://wybieramtak-og-image.azurewebsites.net/screenshot?url=' . urlencode($page_url);
+    ?>
+    -->
+    <meta property="og:image" content="<?php echo $image_url; ?>" />
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="WybieramTak - rekomendacje wyborcze">
+    <meta property="og:site_name" content="WybieramTak">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+    <meta property="og:image:type" content="image/png">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
         /* http://meyerweb.com/eric/tools/css/reset/
         v5.0.2 | 20191019
@@ -666,7 +682,7 @@
             <p class="recommendation">Okręg 16,17,18: tu Twój głos odddany na dekokratyczną opozycję liczy się podwójnie</p>
         </section>
         <section class="bottom-info">
-            <p>Rekomendacje z dnia 05.10</p>
+            <p>Rekomendacje z dnia 10.10</p>
             <p>Aktualne dane na <a href="https://wybierztak.pl/" target="_blank">WybierzTak.pl</a></p>
         </section>
     </div>
