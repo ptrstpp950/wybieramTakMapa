@@ -40,7 +40,8 @@ function recalulateMap() {
             txtElement.setAttribute("class", txtStyle);
         }
     }
-    setState();
+    //setState();
+
 };
 // checkbox logic
 window.party = {
@@ -196,8 +197,9 @@ function zoomFromInput(inputValue) {
 
     if (window.zoomState.zoomIn == true)
         resetZoom();
-
+    
     selectElement("nazwaOkreguSelect", inputValue);
+    
     window.zoomState.zoomIn = true;
     if (window.dane[inputValue] != null) {
         var parentElementToClick = document.getElementById(window.dane[inputValue].nazwaOkregu + "Icon");
@@ -207,7 +209,7 @@ function zoomFromInput(inputValue) {
         }
         zoomOnPath(parentElementToClick.getElementsByTagName("path")[0]);
         hideNonNeibours(inputValue);
-        setSuggestion(inputValue);
+        setSuggestion(window.rekomendacje[window.dane[inputValue].nrOkregu]);
 
     }
 }
@@ -222,10 +224,10 @@ function resetZoom() {
 
 function setSuggestion(txt) {
     if (txt == null || txt == undefined || txt == "") {
-        document.getElementById("suggestion").innerHTML = "To jest sugestia dla całej Polski. Damy radę!";
+        document.getElementById("suggestion").innerHTML = "";
         return;
     } else {
-        document.getElementById("suggestion").innerHTML = "To jest sugestia dla okręgu " + txt + ".";
+        document.getElementById("suggestion").innerHTML = txt;
     }
 
 }

@@ -278,3 +278,20 @@ window.sasiedzi = {
     "40": [4, 26, 38, 41, 8, 39, 37],
     "41": [40, 38, 8]
 }
+
+
+window.rekomendacje = {
+    "7": "Największa szansa dla opozycji na czwarty mandat będzie, gdy niezdecydowani wyborcy Opozycji w tym okręgu wspomogą Lewicę lub Trzecią Drogę. Pomogą aby głosy na mniejsze partie w tym dużym, lecz PiSowskim okręgu się nie zmarnowały. Warto tu wspomnieć, że szansa, by pojedyńczy głos dał dodatkowy mandat jest największa gdy popieramy małą partię! Dzieje się tak, gdyż zgodnie z metodą D'Hondta aby np. KO zdobyła swój trzeci mandat, suma jej głosów dzielona przez trzy musi być wyższa niż głosy małych partii dzielone przez jeden. Szansa jednego głosu na 'przeciągnięcie' mandatu do danej partii jest więc największa gdy oddamy go na te, które walczą o swój pierwszy mandat!",
+    "11": "Pięć mandatów dla opozycji jest tutaj bardzo prawdopodobne. Wyborcy niezdecydowani powinni poprzeć KO bo z 3 partii opozycyjnych ma największe szanse na zdobycie kolejnego mandatu.",
+    "12": "Ta część małopolski jest bardzo pro-pisowska. Lewica nie może liczyć na mandat w tym niewielkim okręgu. Wyborcy Lewicy powinni zagłosować na Lewicę w sąsiednim okręgu nr 14 Nowy Sącz. Niezdecydowani wyborcy Opozycji powinni poprzeć Trzecią Drogę, aby wzrosło prawdopodobieństwo, że ta partia uzyska pierwszy mandat.",
+    "14": "Opozycja bez turystyki wyborczej ma szanse na dwa mandaty. To okręg, gdzie dzieki turystyce wyborczej z dwóch sąsiednich okręgów o pierwszy mandat walczy Lewica. To dałoby trzy mandaty dla Opozycji.",
+    "16": "Niezdecydowani wyborcy Opozycji powinni tutaj wspomóc Lewicę lub Trzecią Drogę - daje to największe szanse na czwarty mandat dla opozycji w tym bastionie prawicy.",
+    "17": "Jest to jeden z okręgów, gdzie spodziewamy się dużej liczby wyborców KO, którzy przyjadą z Warszawy. Turystyka wyborcza wyborców KO powinna przełożyć się na trzeci mandat dla KO. Trzecia Droga może liczyć na jeden mandat. Lewica nie ma realnych szans na mandat, więc jej wyborcy powinni rozważyć wyjazd do okręgu Piotrków Trybunalski. Wyborcy niezdecydowani Opozycji powinni głosować na KO lub Trzecią Drogę.",
+    "19": "Wyborcy KO powinni z tego okręgu masowo wyjechać do okręgu nr 18 Siedlce i 17 Radom. Wyborcy Lewicy i Trzeciej Drogi powinni zostać w Warszawie i głosować na swoje ugrupowania. Dla wyborcó niezdecydowanych opozycji nie ma jeszcze rekomendacji",
+    "20": "KO walczy w tym okręgu o 5 mandatów. Przy założeniu, że Lewica i Trzecia Droga mają pewne po jednym mandacie, opozycja powinna zdobyć 7 mandatów. Wyborcy KO, mimo słabszej siły głosu powinni głosować w swoim okręgu. Wyborcy Lewicy i Trzeciej drogi powinni rozważyć głosowanie w innym okręgu. Cel wyjazdu zostanie określony w późniejszej rekomendacji",
+    "25": "W Gdańsku poparcie KO przez wyborców niezdecydowanych opozycji, maksymalizuje szanse na dodatkowy mandat opozycji.",
+    "27": "W tym okręgu KO ma stabilne poparcie na dwa mandaty, Trzecia Droga dość pewny jeden mandat. Lewica walczy o drugi mandat, dlatego wyborcy niezdecydowani Opozycji powinni rozważyć głosowanie na Lewicę. ",
+    "34": "Stabilne poparcie dla KO dające 3 mandaty. Trzecia Droga i Lewica powinny uzyskać po jednym mandacie, ale mogą wymagać wsparcia turystyką wyborczą.",
+    "37": "Jeśli niezdecydowani wyborcy opozycji poprą tutaj KO, jest szansa na zwycięstwo 5 do 4, szczególnie, że w tym okręgu startuje bardzo medialny Michał Kołodziejczak.",
+    "40": "Niezdecydowani wyborcy opozycji powinnini poprzeć tutaj KO lub Trzecią Drogę aby dać szansę na dodatkowy mandat. Lewica ma stabilne poparcie na 1 mandat i bez realnych szans na drugi mandat.",
+}

@@ -354,3 +354,17 @@ svg.map path {
     }
 }
 
+img.panel{
+    width: 100%;
+}
+
+h1.beforeMap {
+    font-size: xxx-large;
+    width:100%;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h2.recommendation {
+    font-weight: inherit;
+}
