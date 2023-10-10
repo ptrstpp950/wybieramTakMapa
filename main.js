@@ -209,7 +209,7 @@ function zoomFromInput(inputValue) {
         }
         zoomOnPath(parentElementToClick.getElementsByTagName("path")[0]);
         hideNonNeibours(inputValue);
-        setSuggestion(window.rekomendacje[window.dane[inputValue].nrOkregu]);
+        setSuggestion(window.rekomendacje[window.dane[inputValue].nrOkregu] , window.dane[inputValue].nazwaOkregu);
 
     }
 }
@@ -222,12 +222,12 @@ function resetZoom() {
     showAll();
 }
 
-function setSuggestion(txt) {
+function setSuggestion(txt, nazwaOkregu) {
     if (txt == null || txt == undefined || txt == "") {
         document.getElementById("suggestion").innerHTML = "";
         return;
     } else {
-        document.getElementById("suggestion").innerHTML = txt;
+        document.getElementById("suggestion").innerHTML = nazwaOkregu + ": " + txt;
     }
 
 }
