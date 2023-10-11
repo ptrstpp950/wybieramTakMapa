@@ -19,7 +19,7 @@ do
       current_url="${current_url//_lewica_/$lewica}"
 
       # Construct the output file name
-      output_file="img/og-images/ko_${ko}_lewica_${lewica}_td_${td}.png"
+      output_file="img/og-images/ko-${ko}-lewica-${lewica}-td-${td}.png"
 
       # Construct the curl command with the current URL and output file name
       curl_command="curl -o $output_file https://wybieramtak-og-image.azurewebsites.net/screenshot?url=$current_url"
