@@ -1,0 +1,30 @@
+name: Build and deploy PHP app to FTP
+
+on:
+  push:
+    branches:
+      - develop
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: 'Production'
+      url: 'https://wybierztak.pl'
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: mv index.html index.php
+      - run: ./og-image-generator.sh
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
+          password:  ${{ secrets.FTP_PASSWORD }}
+          dry-run: true
+          server-dir: /domains/wybierztak.pl/public_html/
+      - name: 🚀 Success
+        run: cat ./.ftp-deploy-sync-state.json
