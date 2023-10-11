@@ -177,7 +177,13 @@ function setState() {
     queryString += window.party.lewica ? "" : "&lewica=0";
     queryString += window.party.td ? "" : "&td=0";
 
-    window.history.pushState("", "", queryString);
+    window.history.pushState("", "", queryString);    
+
+    url = decodeURI(window.location);
+
+    document.getElementById("shareFacebook").setAttribute("href", "https://www.facebook.com/sharer.php?u="+url);
+    document.getElementById("shareTwitter").setAttribute("href", "https://twitter.com/intent/tweet?url="+url);
+    document.getElementById("shareLinkedIn").setAttribute("href", "https://www.linkedin.com/sharing/share-offsite/?url="+url);
 }
 
 

@@ -391,4 +391,5 @@ div.fullRecomendation{
 @media (max-width: 899px) {
     div.fullRecomendation{
         display: none;
+    }
 }

@@ -1,0 +1,33 @@
+/* CSS file */
+.share-btn {
+    display: inline-block;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.share-btn:hover {
+    opacity: 80%;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.facebook {
+    background-color: #3a579a;
+}
+
+.pinterest {
+    background-color: #cd1c1f;
+}
+
+.linkedin {
+    background-color: #007AB6;
+}
+
+.reddit {
+    background-color: #FF4500;
+}
