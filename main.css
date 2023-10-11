@@ -384,3 +384,7 @@ h2.recommendation {
 b.bold {
     font-weight: bold;
 }
+
+div.fullRecomendation{
+    font-size: 1.25em;
+}
