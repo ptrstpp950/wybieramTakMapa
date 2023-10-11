@@ -16,7 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: mv index.html index.php
-      - run: ./og-image-generator.sh
+      - run: |
+          chmod +x ./og-image-generator.sh
+          ./og-image-generator.sh
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
