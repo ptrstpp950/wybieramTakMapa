@@ -388,3 +388,7 @@ b.bold {
 div.fullRecomendation{
     font-size: 1.25em;
 }
+@media (max-width: 899px) {
+    div.fullRecomendation{
+        display: none;
+}
