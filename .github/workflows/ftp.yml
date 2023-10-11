@@ -15,6 +15,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - run: sed -i -e "s/20231011/${{github.sha}}/g" index.html
       - run: mv index.html index.php
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
