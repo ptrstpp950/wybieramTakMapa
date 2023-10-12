@@ -14,14 +14,14 @@
         $ko = isset($_GET['ko']) ? $_GET['ko'] : '1';
         $lewica = isset($_GET['lewica']) ? $_GET['lewica'] : '1';
         $td = isset($_GET['td']) ? $_GET['td'] : '1';
-        $image_name = "ko-$ko-lewica-$lewica-td-$td"
+        $image_name = "ko-$ko-lewica-$lewica-td-$td";
 
-        $pasek = isset($_GET['pasek']) ? 'display: hidden;' : '';
+        $pasek = isset($_GET['pasek']) ? 'display: none;' : '_';
     ?>
     -->
     <!--
-        IMAGE NAME IS:
-        <?php echo $image_name; ?>
+        PASEK IS:
+        <?php echo $pasek; ?>
     -->
     <meta property="og:image" content="https://wybierztak.pl/img/og-images/<?php echo $image_name;?>.png?v=20231011a" />
     <meta property="og:description" content="Mamy dla Ciebie strategię! 🗳 Twój głos jest cenny 💪 dowiedz się, gdzie będzie miał największy wpływ, śledząc rekomendacje z  ostatnich sondaży 🔍 na WybierzTAK.pl. #Wybory2023 #wybierzTAK PODAJ DALEJ" />
@@ -381,7 +381,7 @@
         <img class="panel" src="img/20231005_Wybory2023_08.jpg" alt="Obraz 8">
         <img class="panel" src="img/20231005_Wybory2023_07.jpg" alt="Obraz 7">
         </div>
-        <div class="shareButtons" style="">
+        <div class="shareButtons" style="<?php echo $pasek; ?>">
             <h2 style="display: inline; align-items: center;">Podziel się: &nbsp;</h2>
             <a id="shareFacebook" class="share-btn facebook" target="_blank"  href="https://www.facebook.com/sharer.php?u=wybieramtak.pl">
                 Facebook

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the URL with placeholders
-url="https%3A%2F%2Fwybierztak.pl%2F%3Fd%3D10%26ko%3D_ko_%26lewica%3D_lewica_%26td%3D_td_"
+url="https%3A%2F%2Fwybierztak.pl%2F%3Fpasek%3D1%26ko%3D_ko_%26lewica%3D_lewica_%26td%3D_td_"
 
 # Define the array of options
 options=("0" "1")
