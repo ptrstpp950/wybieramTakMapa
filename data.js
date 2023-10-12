@@ -46,7 +46,7 @@ window.dane = {
         "nazwaOkregu": "Chełm",
         "nrOkregu": 7,
         "rekomendacjePartii": [
-            ""
+            "LEWICA"
         ]
     },
     "Zielona Góra": {
@@ -68,7 +68,7 @@ window.dane = {
         "nazwaOkregu": "Piotrków Trybunalski",
         "nrOkregu": 10,
         "rekomendacjePartii": [
-            "KO",
+            "TD",
             "LEWICA"
         ]
     },
@@ -148,7 +148,7 @@ window.dane = {
         "nazwaOkregu": "Opole",
         "nrOkregu": 21,
         "rekomendacjePartii": [
-            ""
+            "TD"
         ]
     },
     "Krosno": {
@@ -205,7 +205,8 @@ window.dane = {
         "nazwaOkregu": "Gliwice",
         "nrOkregu": 29,
         "rekomendacjePartii": [
-            "KO"
+            "KO",
+            "TD"
         ]
     },
     "Rybnik": {
@@ -255,8 +256,7 @@ window.dane = {
         "nazwaOkregu": "Kalisz",
         "nrOkregu": 36,
         "rekomendacjePartii": [
-            "KO",
-            "TD"
+            "KO"
         ]
     },
     "Konin": {
@@ -346,20 +346,38 @@ window.sasiedzi = {
 
 
 window.rekomendacje = {
-    "7": "Największa szansa dla opozycji na kolejny mandat będzie, gdy niezdecydowani wyborcy Opozycji w tym okręgu wspomogą Lewicę lub Trzecią Drogę. Pomogą aby głosy na mniejsze partie w tym dużym, lecz PiSowskim okręgu się nie zmarnowały.",
-    "11": "Pięć mandatów dla opozycji jest tutaj bardzo prawdopodobne. Wyborcy niezdecydowani powinni poprzeć KO bo z 3 partii opozycyjnych ma największe szanse na zdobycie kolejnego mandatu.",
-    "12": "W tej części Małopolski jest dużo zwolenników PiS. Lewica nie może liczyć na mandat w tym niewielkim okręgu. Wyborcy Lewicy powinni zagłosować na Lewicę w sąsiednim okręgu nr 14 Nowy Sącz. Niezdecydowani wyborcy Opozycji powinni poprzeć Trzecią Drogę, aby wzrosło prawdopodobieństwo, że ta partia uzyska pierwszy mandat.",
-    "14": "Opozycja bez turystyki wyborczej ma szanse na trzy mandaty. To okręg, gdzie dzieki turystyce wyborczej z dwóch sąsiednich okręgów o pierwszy mandat walczy Lewica. To dałoby cztery mandaty dla Opozycji. Niezdecydowani wyborcy opozycji powinni poprzeć Lewicę lub KO.",
-    "15": "Podobnie jak na Podhalu Lewica jest tu bez szans na mandat, KO powinna zdobyć dwa mandaty, Trzecia Droga, biorąc pod uwagę, że startuje tu Władysław Kosiniak - Kamysz ma szanse walczyć o drugi mandat. Niezdecydowani wyborcy Opozycji powinni rozważyć głosowanie na Trzecią Drogę, aby miała szansę na drugi mandat. Wyborcy Lewicy, którzy mogą zagłosować w innym okręgu, według naszej rekomendacji powinni zagłosować w okręgu nr 14 - Nowy Sącz.",
-    "16": "Niezdecydowani wyborcy Opozycji powinni tutaj wspomóc Lewicę lub Trzecią Drogę - daje to największe szanse nakolejny mandat dla opozycji.",
-    "17": "Jest to jeden z okręgów, gdzie spodziewamy się dużej liczby wyborców KO, którzy przyjadą z Warszawy. Turystyka wyborcza wyborców KO powinna przełożyć się na kolejny mandat dla KO. Trzecia Droga może liczyć na jeden mandat. Lewica nie ma realnych szans na mandat, więc jej wyborcy powinni rozważyć wyjazd do okręgu Piotrków Trybunalski i częściowo do okręgu płockiego. Wyborcy niezdecydowani Opozycji powinni głosować na KO lub Trzecią Drogę.",
-    "18": "To okręg, gdzie spodziewany jest największy wpływ turystyki wyborczej z Warszawy, która jest rekomendowana dla wyborców KO. Wyborcy niezdecydowani, również powinni wesprzeć KO.",
-    "19": "Wyborcy KO powinni z tego okręgu masowo wyjechać do okręgu nr 18 Siedlce i 17 Radom. Wyborcy Lewicy i Trzeciej Drogi powinni zostać w Warszawie i głosować na swoje ugrupowania. Dla wyborców niezdecydowanych opozycji nie ma jeszcze rekomendacji.",
-    "20": "KO walczy w tym okręgu o 5 mandatów. Przy założeniu, że Lewica i Trzecia Droga mają pewne po jednym mandacie, opozycja powinna zdobyć 7 mandatów. Wyborcy KO, mimo słabszej siły głosu powinni głosować w swoim okręgu. Wyborcy Lewicy powinni częściowo głosować w okręgu 16, gdzie Leiwca walczy o pierwszy mandat.",
-    "21": "W tym okręgu najbardziej prawdopodobny rozkład mandatów to po 4 dla KO i PiS i po jednym dla pozostałych partii, w tym Mniejszości Niemieckiej. Nie ma potrzeby głosowania strategicznego, ani turystyki wyborczej.",
-    "25": "W Gdańsku poparcie KO przez wyborców niezdecydowanych opozycji, maksymalizuje szanse na dodatkowy mandat opozycji.",
-    "27": "W tym okręgu KO ma stabilne poparcie na dwa mandaty, Trzecia Droga dość pewny jeden mandat. Lewica walczy o drugi mandat, dlatego wyborcy niezdecydowani Opozycji powinni rozważyć głosowanie na Lewicę. ",
-    "34": "Stabilne poparcie dla KO dające 3 mandaty. Trzecia Droga i Lewica powinny uzyskać po jednym mandacie, Lewica może wymagać wsparcia turystyką wyborczą.",
-    "37": "Jeśli niezdecydowani wyborcy opozycji poprą tutaj KO, jest szansa na zwycięstwo 5 do 4, szczególnie, że w tym okręgu startuje bardzo medialny Michał Kołodziejczak.",
-    "40": "Niezdecydowani wyborcy opozycji powinnini poprzeć tutaj KO aby dać szansę na dodatkowy mandat, lub Trzecią Drogę aby być pewnym pierwszego mandatu. Lewica ma stabilne poparcie na 1 mandat i bez realnych szans na drugi mandat.",
+    "3": "Wyborcy KO powinni głosować w tym okręgu, aby być pewnym zdobycia szóstego mandatu",
+    "6": "Wszystkie partie opozycyjne mają szanse na kolejny mandat, W walce z PiS o ostatni mandat potrzebna jest mobilizacjia wszystkich wyborców opozycji.",
+    "7": "KO ze stabilnym poparciem na dwa mandaty, Trzecia Droga ze stabilnym poparciem na jeden mandat. Lewica z umiarkowanymi szansami na pierwszy mandat. Wsparcie jej potencjalnie również wyborcami Lewicy z Krosna może zwiększyć szanse na mandat. Stąd rekomendacja wsparcia Lewicy.",
+    "8": "Dla scenariusza jak tu, że 80% układ mandatów między opozycją się nie zmieni, ja zostawiłbym bez rekomendacji",
+    "10": "KO ze stabilnym poparciem na dwa mandaty, Lewica walczy o pierwszy mandat przy wsparciu wyborców z Radomia. Trzecia Droga może potrzebować wsparcia dla obrony pierwszego mandatu.",
+    "11": "Partie opozycyjne mają potencjał wzrostowy zależny od mobilizacji/. Najbliżej drugiego mandatu jest Trzecia Droga.",
+    "13": "Wyborcy Trzeciej Drogi mają stabilne poparcie na pierwszy mandat i mogą wesprzeć turystyką wyborczą walkę o mandat w Chrzanowie. Wyborcy Lewicy powinni głosować w Krakowie i walczyć o dwa mandaty. Wyborcy KO mogą wykorzystać turystykę wyborczą i wesprzeć walkę o kolejny mandat w Tarnowie.",
+    "14": "W tym okręgu rekomendujemy wsparcie Lewicy, aby wzmocnić efekt turystyki wyborczej Lewicy z okręgów Tarnów i Chrzanów.",
+    "15": "Trzecia droga ma pewny pierwszy mandat, KO jest najbliższa zdobycia drugiego mandatu. Wyborcy Lewicy powinni głosować w okręgu Nowy Sącz, gdzie Lewica wsparta wyborcami z Tarnowa i Chrzanowa walczy o pierwszy manda",
+    "16": "Lewica przy wsparciu turystyki wyborczej ma realne szanse na pierwszy mandat. Jest możliwe niedoszacowanie Trzeciej Drogi, stąd rekomendacja wspierania zarówno Trzeciej Drogi jak i Lewicy.",
+    "17": "Wyborcy Lewicy powinni wesprzeć turystyką wyborczą Piotrków Trybunalski i częściowo okręg płocki. Jest to okręg, gdzie spodziewanych jest wielu wyborców z Warszawy. Dla wzmocnienia tego efektu rekomendowane jest wsparcie KO i Trzeciej Drogi, tak aby Trzecia Droga nie utraciła jednego mandatu z powodu dodatkowych wyborców KO z Warszawy.",
+    "18": "To jest okręg, w którym spodziewany jest największy udział wyborców, którzy przyjadą tu z Warszawy, będą to głównie wyborcy KO. Trzecia Droga zdobędzie jeden mandat, Lewica ma zbyt niskie poparcie na pierwszy mandat. Rekomendacja wsparcia KO, dla wzmocnienia efektu turystyki wyborczej.",
+    "19": "Wyborcy KO powinni masowo zagłosować w okręgach Siedlce i Radom. Jest to strategia oparta na głosowaniu tam, gdzie jest większa siła głosu. Przy masowym wyjeździe z Warszawy do okręgu siedleckiego i radomskiego KO może stracić mandat, ale z dużym prawdopodobieństwem zostanie on przejęty przez Lewicę albo Trzecią Drogę. Część wyborców KO (mieszkańcy Bielan) powinni zagłosować w okręgu powdarszawskim dla zapewnienia piątego mandatu dla KO w tym okręgu. Wyborcy Lewicy walczą o trzeci mandat i powinni głosować w Warszawie. Wyborcy Trzeciej Drogi powinni częściowo rozważyć wyjazd do Radomia.",
+    "20": "W tym okręgu po jednym mandacie zdobędą Lewica, Trzecia Droga i Konfederacja. Pozostałe 9 podzielą KO i PiS i może zadecydować różnica jednego głosu. Wyborcy KO powinni głosować w swoim domowym okręgu. Wyborcy Lewicy mają bezpieczne poparcie zapewniające pierwszy mandat. Wyborcy Lewicy mieszkający blisko okręgu płockiego, powinny wesprzeć Lewicę w okręgu płockim.",
+    "21": "Bez rekomendacji.",
+    "22": "O pierwszy mandat walczy Trzecia Droga. Lewica bez realnych szans na mandat. Jej wyborcy powinni wesprzeć okręg rzeszowski.",
+    "23": "Lewica walczy o mandat przy wsparciu turystyki wyborczej z Krosna, Pozostałe partie ze stabilnym poparciem.",
+    "24": "Trzecia Droga ma szanse na drugi mandat przy wsparciu turystyki wyborczej swoich wyborców z Olsztyna i Siedlec. KO i Lewica ze stabilnym poparciem.",
+    "25": "Lewica powinna wesprzeć Elbląg, gdzie Lewica walczy o mandat.",
+    "26": "Trzecia Droga i Lewica ze stabilnym poparciem na jeden mandat. Najwieksze szanse walki o kolejny mandat ma KO",
+    "27": "Trzecia Doga walczy o pierwszy mandat, Lewica broni pierwszego mandatu, KO ze stabilnym poparciem na 3 mandaty. Trzecia Droga może zdobyć mandat, ale żeby nie był on kosztm Lewicy a Konfederacji, Lewica również musi starać się o większą liczbę głosów. Kluczowa jest mobilizacja tych wyborców ktorzy tam są.",
+    "28": "Trzecia Droga potrzebuje wsparcia pierwszego mandatu, KO i Lewica ze stabilnym wsparciem.",
+    "29": "KO i Trzecia Droga walczą o ostatni mandat z Konfederacjią, wsparcia potrzebują obydwie partie, żeby nie walczyć w obrębie obozu demokratycznego.",
+    "30": "Trzecia Droga ma szanse na odebranie mandatu PiS , KO ma stablilne poparcie dla 3 mandatów, Lewica z mniejszymi szansami na pierwszy mandat, niż Trzecia Droga.",
+    "31": "KO i Lewica mają stabilne poparcie na odpowiednio piąty i pierwszy mandat. Można rozważyć wsparcie okręgu Bielsko Biała przez turystykę wyborczą.Trzecia Droga może potrzebować wsparcia pierwszego mandatu",
+    "32": "Lewica ze stabilnym poparciem na dwa mandaty, Największe szanse na walkę z PiS i Konfederacjią o ostatni mandat ma KO",
+    "33": "Kielce jako okręg o dużej sile głosu będzie zapewne celem turystyki wyborczej motywowanej siłą głosu. Jest to okręg, gdzie konkurują Giertych na liście KO i Kaczyński na liście PiS. Lewica i Trzecia Droga mają stabilne poparcie na jeden mandat, warto wesprzeć KO, które może liczyć na dodatkowych wyborców związanych z turystyką wyborczą.",
+    "34": "KO ze stabilnym poparciem na 3 mandaty. Elbląg jako okręg o największej sile głosu będzie zapewne celem turystyki wyborczej motywowanej siłą głosu. Tacy wyborcy powinni wesprzeć Trzecią Drogę lub Lewicę",
+    "35": "Najbardziej prawdopodobny scenariusz dla Opozycji, to po jednym mandacie dla Lewicy i Trzeciej Drogi i trzy mandaty dla KO.",
+    "37": "Najbardziej prawdopodobny scenariusz dla Opozycji, to po jednym mandacie dla Lewicy i Trzeciej Drogi i dwa mandaty dla KO. KO może zdobyć kolejny mandat kosztem Konfederacji przy wsparciu turystyką wyborczą z Torunia i Bydgoszczy",
+    "38": "KO i Lewica mogą liczyć w sumie na pięć mandatów. Trzecia Droga ma pewny jeden mandat. Wsparcie KO lub Lewicy broni te mandaty przed Konfederacją",
+    "39": "KO lub Trzecia Droga może przegrać ostatni mandat z Konfederacją. Wyborcy KO nie powinni wyjeżdżać z Poznania. Lewica z małymi szansami na drugi mandat.",
+    "40": "KO ma największe szanse walki o kolejny mandat z PiS lub Konfederacją. Trzecia Droga i Lewica z bezpiecznym poparciem dla pierwszego mandatu",
+    "41": "KO ma największe szanse walki o kolejny mandat z PiS lub Konfederacją. Trzecia Droga i Lewica z bezpiecznym poparciem dla pierwszego mandatu",    
 }
