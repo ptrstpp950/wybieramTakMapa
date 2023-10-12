@@ -327,7 +327,79 @@ h1 {
     font-size: smaller;
 }
 
-
+section#votes-vs-mandates {
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 3em 3em 6em;
+}
+section#votes-vs-mandates h1 {
+    font-size: 4em;
+    font-weight: 600;
+    z-index: 1;
+}
+section#votes-vs-mandates h1.realistic-marker-highlight::before {
+    background-color: #da4131;
+    height: 2.7em;
+    width: 105%;
+    transform: skew(5deg,2deg);
+}
+section#votes-vs-mandates > div {
+    display: flex;
+    justify-content: center;
+}
+section#votes-vs-mandates div.left span:not(.hint),
+section#votes-vs-mandates div.right span:not(.hint) {
+    font-size: 3em;
+    color: #000;
+}
+section#votes-vs-mandates div.left,
+section#votes-vs-mandates div.right {
+    background-color: #fff;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    max-width: 40%;
+    position: relative;
+}
+section#votes-vs-mandates div.left {
+    margin-right: 4rem;
+    z-index: 0;
+}
+section#votes-vs-mandates div.left::after {
+    content: '';
+    position: absolute;
+    right: -50px;
+    z-index: -1;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid #fff;
+}
+section#votes-vs-mandates div.right {
+    padding: 25px 50px;
+}
+section#votes-vs-mandates div.right::before {
+    content: '';
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid #333;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+section#votes-vs-mandates div.right span.hint {
+    font-size: 1.5em;
+    position: absolute;
+    top: 105%;
+    right: 0;
+    width: 100%;
+    text-align: right;
+}
 
 svg.map {
     fill: #ddd;
