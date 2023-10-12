@@ -56,6 +56,10 @@ table {
 :root {
     --form-control-background: #0d6efd;
     --form-control-color: #fff;
+    --td-color: #3CB035;
+    --lewica-color: #A71256;
+    --ko-color: #02468F;
+    --ko-color-alt: #2670bd;
 }
 
 html {
@@ -170,7 +174,69 @@ main {
     margin: 0 auto;
 }
 
-/* Style for the parent element */
+.realistic-marker-highlight {
+    position: relative;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+.realistic-marker-highlight:before{
+    content:"";
+    width:100%;
+    height:1.3em;
+    position:absolute;
+    z-index:-1;
+    filter:url(#marker-shape);
+    left:-0.25em;
+    top:-0.05em;
+    padding:0 0.30em;
+}
+
+header.site-header {
+    background: #004494;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: 'Archivo', serif;
+    padding: 20px;
+}
+header.site-header .wybierz-tak-logo {
+    --logo-fill: #fff;
+    max-width: 50%;
+    margin-bottom: 1rem;
+}
+header.site-header > span {
+    font-size: 3em;
+    margin-bottom: 1rem;
+}
+header.site-header > span.with-parties {
+    z-index: 1;
+}
+header.site-header .trzecia-droga.realistic-marker-highlight::before {
+    background-color: var(--td-color);
+    transform: skew(1deg, 1deg);
+    width: 108%;
+    height: 1.2em;
+}
+header.site-header .ko.realistic-marker-highlight::before {
+    width: 112%;
+    background-color: var(--ko-color-alt);
+    height: 1em;
+    top: 0;
+    left: -.10em;
+}
+header.site-header .lewica.realistic-marker-highlight::before {
+    width: 112%;
+    background-color: var(--lewica-color);
+    transform: skew(-4deg, -4deg);
+    height: 1.3em;
+}
+header.site-header span.populist {
+    font-weight: 600;
+}
+
+    /* Style for the parent element */
 .parent-element {
     display: flex;
     flex-direction: row;
@@ -273,7 +339,7 @@ svg.map path {
 svg.map path:hover {
     stroke: black;
     stroke-width: 4px;
-    filter: 
+    filter:
         saturate(1.2);
 }
 
@@ -324,6 +390,11 @@ svg.map path:hover {
 
 /* Media query for screen sizes less than 900px */
 @media (max-width: 899px) {
+    body {
+        font-family: 'Archivo', serif;
+        font-size: 12px;
+    }
+
     main {
         padding: 10px;
     }
@@ -360,9 +431,6 @@ svg.map path:hover {
     }
 }
 
-img.panel{
-    width: 100%;
-}
 
 h1.beforeMap {
     font-size: 2.5em;

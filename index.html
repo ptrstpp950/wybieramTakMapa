@@ -8,7 +8,7 @@
     <!--
     <?php
         $page_url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."#";
-        
+
         $image_url = 'https://wybieramtak-og-image.azurewebsites.net/screenshot?url=' . urlencode($page_url);
 
         $ko = isset($_GET['ko']) ? $_GET['ko'] : '1';
@@ -52,7 +52,22 @@
 
 <body>
     <main>
-        <img class="panel" src="img/20231005_Wybory2023_01_v07.jpg" alt="Obraz 1">
+        <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
+            <defs>
+                <filter id="marker-shape">
+                    <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+                    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+                </filter>
+            </defs>
+        </svg>
+        <header class="site-header">
+            <img class="wybierz-tak-logo" src="img/wybierz-tak_logo.svg" alt="wybierz-tak-logo">
+            <br/>
+            <span class="with-parties">Głosuj na <span class="trzecia-droga realistic-marker-highlight">Trzecią Drogę</span>, <span class="ko realistic-marker-highlight">KO</span> albo <span class="lewica realistic-marker-highlight">Lewicę</span> tam,<br/> gdzie Twój głos może zmienić najwięcej.</span>
+            <br/>
+            <span class="populist">Gdzie trzech się bije, tam populista korzysta!</span>
+        </header>
+        <br>
 
         <h1 id="map" class="beforeMap">
             Mapa przedstawia regiony w których twój głos jest najbardziej potrzebny.
@@ -365,7 +380,7 @@
             Zanim zdecydujesz się głosować w innym okręgu wyborczym, przeczytaj nasze rekomendacje na temat turystyki
             wyborczej.
         </h2>
-        
+
         <section class="recommendations">
             <!--p id="recommendation" class="recommendation">Okręg 20: KO walczy z PIS o piąty mandat</p-->
             <!--p class="recommendation">Okręg 19: Lewica walczy o trzeci mandat, Trzecia Droga - o drugi</p>
@@ -380,7 +395,7 @@
         <img class="panel" src="img/20231005_Wybory2023_06.jpg" alt="Obraz 6">
         <img class="panel" src="img/20231005_Wybory2023_08.jpg" alt="Obraz 8">
         <img class="panel" src="img/20231005_Wybory2023_07.jpg" alt="Obraz 7">
-        </div>
+        </main>
         <div class="shareButtons" style="<?php echo $pasek; ?>">
             <h2 style="display: inline; align-items: center;">Podziel się: &nbsp;</h2>
             <a id="shareFacebook" class="share-btn facebook" target="_blank"  href="https://www.facebook.com/sharer.php?u=wybieramtak.pl">
@@ -395,7 +410,7 @@
                 LinkedIn
             </a>
         </div>
-        
+
         <script src="main.js?v=20231011a"></script>
 
 </body>
