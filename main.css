@@ -401,6 +401,67 @@ section#votes-vs-mandates div.right span.hint {
     text-align: right;
 }
 
+section#strategy-1,
+section#strategy-2 {
+    font-family: "Arial", "sans-serif";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 3em;
+    font-size: 2em;
+    text-align: center;
+}
+section#strategy-1 {
+    background-color: #ececec;
+    background-image: linear-gradient(to bottom right, #fff, #ececec);
+}
+section#strategy-2 {
+    background-color: #da4131;
+    color: #fff;
+}
+section#strategy-2 small {
+    margin-top: 2em;
+    font-size: 0.8em;
+}
+section#strategy-2 img,
+section#strategic-analysis img {
+    margin-top: 2em;
+    max-width: 30%;
+    margin-left: auto;
+}
+
+section#strategy-1 h1,
+section#strategy-2 h1,
+section#strategic-analysis h1 {
+    font-family: "Arial Black", "Arial", "sans-serif";
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+section#strategy-1 p,
+section#strategy-2 p,
+section#strategic-analysis ul {
+    font-size: 1.5em;
+}
+section#strategic-analysis ul {
+    list-style: initial;
+}
+section#strategic-analysis ul:not(:last-of-type) {
+    margin-bottom: 1em;
+}
+
+section#strategic-analysis {
+    font-size: 1.5em;
+    font-family: "Arial", "sans-serif";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 3em;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+
 svg.map {
     fill: #ddd;
 }
