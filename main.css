@@ -56,10 +56,6 @@ table {
 :root {
     --form-control-background: #0d6efd;
     --form-control-color: #fff;
-    --td-color: #3CB035;
-    --lewica-color: #A71256;
-    --ko-color: #02468F;
-    --ko-color-alt: #2670bd;
 }
 
 html {
@@ -174,69 +170,7 @@ main {
     margin: 0 auto;
 }
 
-.realistic-marker-highlight {
-    position: relative;
-    margin-left: 5px;
-    white-space: nowrap;
-}
-.realistic-marker-highlight:before{
-    content:"";
-    width:100%;
-    height:1.3em;
-    position:absolute;
-    z-index:-1;
-    filter:url(#marker-shape);
-    left:-0.25em;
-    top:-0.05em;
-    padding:0 0.30em;
-}
-
-header.site-header {
-    background: #004494;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-    font-family: 'Archivo', serif;
-    padding: 20px;
-}
-header.site-header .wybierz-tak-logo {
-    --logo-fill: #fff;
-    max-width: 50%;
-    margin-bottom: 1rem;
-}
-header.site-header > span {
-    font-size: 3em;
-    margin-bottom: 1rem;
-}
-header.site-header > span.with-parties {
-    z-index: 1;
-}
-header.site-header .trzecia-droga.realistic-marker-highlight::before {
-    background-color: var(--td-color);
-    transform: skew(1deg, 1deg);
-    width: 108%;
-    height: 1.2em;
-}
-header.site-header .ko.realistic-marker-highlight::before {
-    width: 112%;
-    background-color: var(--ko-color-alt);
-    height: 1em;
-    top: 0;
-    left: -.10em;
-}
-header.site-header .lewica.realistic-marker-highlight::before {
-    width: 112%;
-    background-color: var(--lewica-color);
-    transform: skew(-4deg, -4deg);
-    height: 1.3em;
-}
-header.site-header span.populist {
-    font-weight: 600;
-}
-
-    /* Style for the parent element */
+/* Style for the parent element */
 .parent-element {
     display: flex;
     flex-direction: row;
@@ -327,221 +261,8 @@ h1 {
     font-size: smaller;
 }
 
-section#votes-vs-mandates {
-    background: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    padding: 3em 3em 6em;
-}
-section#votes-vs-mandates h1 {
-    font-size: 4em;
-    font-weight: 600;
-    z-index: 1;
-}
-section#votes-vs-mandates h1.realistic-marker-highlight::before {
-    background-color: #da4131;
-    height: 2.7em;
-    width: 105%;
-    transform: skew(5deg,2deg);
-}
-section#votes-vs-mandates > div {
-    display: flex;
-    justify-content: center;
-}
-section#votes-vs-mandates div.left span:not(.hint),
-section#votes-vs-mandates div.right span:not(.hint) {
-    font-size: 3em;
-    color: #000;
-}
-section#votes-vs-mandates div.left,
-section#votes-vs-mandates div.right {
-    background-color: #fff;
-    height: 200px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    max-width: 40%;
-    position: relative;
-}
-section#votes-vs-mandates div.left {
-    margin-right: 4rem;
-    z-index: 0;
-}
-section#votes-vs-mandates div.left::after {
-    content: '';
-    position: absolute;
-    right: -50px;
-    z-index: -1;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 50px solid #fff;
-}
-section#votes-vs-mandates div.right {
-    padding: 25px 50px;
-}
-section#votes-vs-mandates div.right::before {
-    content: '';
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 50px solid #333;
-    position: absolute;
-    left: 0;
-    z-index: 1;
-}
-section#votes-vs-mandates div.right span.hint {
-    font-size: 1.5em;
-    position: absolute;
-    top: 105%;
-    right: 0;
-    width: 100%;
-    text-align: right;
-}
 
-section#strategy-1,
-section#strategy-2 {
-    font-family: "Arial", "sans-serif";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em 3em;
-    font-size: 2em;
-    text-align: center;
-}
-section#strategy-1,
-section#initiative {
-    background-color: #ececec;
-    background-image: linear-gradient(to bottom right, #fff, #ececec);
-    color: #333;
-}
-section#strategy-2 {
-    background-color: #da4131;
-    color: #fff;
-}
-section#strategy-2 small {
-    margin-top: 2em;
-    font-size: 0.8em;
-}
-section#strategy-2 img,
-section#strategic-analysis img {
-    margin-top: 2em;
-    max-width: 30%;
-    margin-left: auto;
-    min-width: 200px;
-}
 
-section#strategy-1 h1,
-section#strategy-2 h1,
-section#strategic-analysis h1,
-section#initiative h1 {
-    font-family: "Arial Black", "Arial", "sans-serif";
-    font-weight: 600;
-    margin-bottom: 1em;
-}
-section#strategy-1 p,
-section#strategy-2 p,
-section#strategic-analysis ul,
-section#initiative ul {
-    font-size: 1.5em;
-    text-align: left;
-}
-section#strategic-analysis ul,
-section#initiative ul {
-    list-style: initial;
-}
-section#strategic-analysis ul:not(:last-of-type),
-section#initiative ul:not(:last-of-type) {
-    margin-bottom: 1em;
-}
-
-section#strategic-analysis {
-    font-size: 1.5em;
-    font-family: "Arial", "sans-serif";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em 3em;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-}
-
-section#initiative {
-    font-size: 1.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em 3em;
-    text-align: center;
-    color: #333;
-}
-section#initiative::after {
-    content:'';
-    height: 80px;/* share buttons offset */
-}
-section#initiative .inverted-logo {
-    --logo-fill: #da4131;
-    width: 50%;
-    margin-bottom: 0.5em;
-    min-width: 300px;
-}
-section#initiative .phone {
-    white-space: nowrap;
-}
-section#initiative h1 {
-    font-size: 2.5em;
-}
-section#initiative ul.what-we-do {
-    font-size: 1.8em;
-}
-section#initiative ul.who-we-are {
-    font-size: 1.3em;
-    list-style: none;
-    width: 100%;
-    margin-bottom: 1em;
-}
-section#initiative ul.who-we-are li {
-    display: flex;
-    justify-content: space-between;
-}
-section#initiative ul.who-we-are li span {
-    display: flex;
-    align-items: center;
-}
-section#initiative a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1.3em;
-    display: flex;
-    align-items: center;
-}
-.icon {
-    width: 30px;
-    height: 30px;
-    background-color: #333;
-    border-radius: 50%;
-    color: #fff;
-    margin-right: .25em;
-    flex-shrink: 0;
-}
-section#initiative .cc {
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4em;
-    font-size: 1.2em;
-    text-align: left;
-}
-
-section#initiative .cc svg {
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-}
 svg.map {
     fill: #ddd;
 }
@@ -552,7 +273,7 @@ svg.map path {
 svg.map path:hover {
     stroke: black;
     stroke-width: 4px;
-    filter:
+    filter: 
         saturate(1.2);
 }
 
@@ -603,11 +324,6 @@ svg.map path:hover {
 
 /* Media query for screen sizes less than 900px */
 @media (max-width: 899px) {
-    body {
-        font-family: 'Archivo', serif;
-        font-size: 12px;
-    }
-
     main {
         padding: 10px;
     }
@@ -642,12 +358,11 @@ svg.map path:hover {
     .left-column {
         width: 100%;
     }
-
-    section#initiative ul.who-we-are li {
-        margin-bottom: 1em;
-    }
 }
 
+img.panel{
+    width: 100%;
+}
 
 h1.beforeMap {
     font-size: 2.5em;
