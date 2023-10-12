@@ -415,6 +415,7 @@ section#strategy-1,
 section#initiative {
     background-color: #ececec;
     background-image: linear-gradient(to bottom right, #fff, #ececec);
+    color: #333;
 }
 section#strategy-2 {
     background-color: #da4131;
@@ -429,6 +430,7 @@ section#strategic-analysis img {
     margin-top: 2em;
     max-width: 30%;
     margin-left: auto;
+    min-width: 200px;
 }
 
 section#strategy-1 h1,
@@ -484,6 +486,10 @@ section#initiative .inverted-logo {
     --logo-fill: #da4131;
     width: 50%;
     margin-bottom: 0.5em;
+    min-width: 300px;
+}
+section#initiative .phone {
+    white-space: nowrap;
 }
 section#initiative h1 {
     font-size: 2.5em;
@@ -519,6 +525,7 @@ section#initiative a {
     border-radius: 50%;
     color: #fff;
     margin-right: .25em;
+    flex-shrink: 0;
 }
 section#initiative .cc {
     color: #333;
@@ -533,6 +540,7 @@ section#initiative .cc {
 section#initiative .cc svg {
     width: 80px;
     height: 80px;
+    flex-shrink: 0;
 }
 svg.map {
     fill: #ddd;
@@ -633,6 +641,10 @@ svg.map path:hover {
     .right-column,
     .left-column {
         width: 100%;
+    }
+
+    section#initiative ul.who-we-are li {
+        margin-bottom: 1em;
     }
 }
 
