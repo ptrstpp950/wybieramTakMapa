@@ -19,8 +19,6 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -146,27 +144,46 @@ body {
 
 body {
     font-family: 'Archivo', serif;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 1.25;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 3.5em;
     font-weight: bolder;
     margin-bottom: 0.8em;
 }
-
 h2 {
-    font-size: 1.5em;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+h3 {
+    font-size: 2.5em;
+    font-weight: bolder;
+    margin-bottom: 0.8em;
+}
+h4 {
+    font-size: 2.25em;
     font-weight: bolder;
     margin-bottom: 0.5em;
 }
-
-p {
-    margin-bottom: 0.25em;
+h5 {
+    font-size: 2em;
+    margin-bottom: 0.8em;
+}
+h6 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+}
+#suggestionStatic {
+    font-weight: 700;
 }
 
-
+p {
+    font-size: 1em;
+    margin-bottom: 0.25em;
+}
 
 main {
     padding: 0px;
@@ -236,6 +253,10 @@ header.site-header span.populist {
     font-weight: 600;
 }
 
+section#actual-map, section.recommendations, section.bottom-info{
+    padding: 10px;
+    font-size: 0.9rem;
+}
     /* Style for the parent element */
 .parent-element {
     display: flex;
@@ -270,10 +291,6 @@ header.site-header span.populist {
 .recommendations p {
     font-size: 1.25em;
     margin-bottom: 0.25em;
-}
-
-.bottom-info p {
-    font-size: 1.25em;
 }
 
 
@@ -332,17 +349,23 @@ section#votes-vs-mandates {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
-    padding: 3em 3em 6em;
+    padding: 3em;
+    font-size: 1em;
 }
 section#votes-vs-mandates h1 {
-    font-size: 4em;
-    font-weight: 600;
     z-index: 1;
+    color: white;
+}
+section#votes-vs-mandates > div h6 {
+    font-weight: bold;
+    font-size: 2em;
+}
+section#votes-vs-mandates .realistic-marker-highlight {
+    white-space: break-spaces;
 }
 section#votes-vs-mandates h1.realistic-marker-highlight::before {
     background-color: #da4131;
-    height: 2.7em;
+    height: 106%;
     width: 105%;
     transform: skew(5deg,2deg);
 }
@@ -352,11 +375,11 @@ section#votes-vs-mandates > div {
 }
 section#votes-vs-mandates div.left span:not(.hint),
 section#votes-vs-mandates div.right span:not(.hint) {
-    font-size: 3em;
-    color: #000;
+    color: #333;
 }
 section#votes-vs-mandates div.left,
 section#votes-vs-mandates div.right {
+    flex: 1;
     background-color: #fff;
     height: 200px;
     text-align: center;
@@ -364,41 +387,84 @@ section#votes-vs-mandates div.right {
     align-items: center;
     justify-content: center;
     align-content: center;
-    max-width: 40%;
     position: relative;
+    padding: 25px 50px;
+    z-index: 0;
 }
 section#votes-vs-mandates div.left {
     margin-right: 4rem;
-    z-index: 0;
+    z-index: 1;
 }
 section#votes-vs-mandates div.left::after {
     content: '';
     position: absolute;
-    right: -50px;
+    right: -39px;
     z-index: -1;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 50px solid #fff;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #fff;
 }
-section#votes-vs-mandates div.right {
-    padding: 25px 50px;
-}
+
 section#votes-vs-mandates div.right::before {
     content: '';
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 50px solid #333;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #333;
     position: absolute;
-    left: 0;
-    z-index: 1;
+    left: -1px;
+    z-index: 2;
 }
-section#votes-vs-mandates div.right span.hint {
-    font-size: 1.5em;
-    position: absolute;
-    top: 105%;
-    right: 0;
-    width: 100%;
+section#votes-vs-mandates .hint {
+    font-size: 2em;
     text-align: right;
+    color: #fff;
+    margin-top: 1em;
+}
+@media (max-width: 899px) {
+    section#votes-vs-mandates h1 {
+        font-size: 4em;
+    }
+    section#votes-vs-mandates div.left {
+        margin-right: unset;
+        margin-bottom: 2em;
+    }
+    section#votes-vs-mandates > div {
+        flex-direction: column;
+    }
+    section#votes-vs-mandates > div h6 {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    section#votes-vs-mandates div.left,
+    section#votes-vs-mandates div.right {
+        font-size: 2em;
+        max-width: unset;
+        padding: 20px;
+        flex: 0;
+        min-height: 200px;
+    }
+    section#votes-vs-mandates div.right h6 {
+        margin-top: 1em;
+    }
+    section#votes-vs-mandates div.left::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        border-right: 40px solid transparent;
+        border-left: 40px solid transparent;
+        border-top: 40px solid #fff;
+        top: calc(100% - 1px);
+        left: unset;
+        right: unset;
+    }
+    section#votes-vs-mandates div.right::before {
+        border-right: 40px solid transparent;
+        border-top: 40px solid #333;
+        border-left: 40px solid transparent;
+        top: -1px;
+        left: unset;
+        right: unset;
+    }
 }
 
 section#strategy-1,
@@ -408,7 +474,7 @@ section#strategy-2 {
     flex-direction: column;
     align-items: center;
     padding: 2em 3em;
-    font-size: 2em;
+    font-size: 1rem;
     text-align: center;
 }
 section#strategy-1,
@@ -445,8 +511,12 @@ section#strategy-1 p,
 section#strategy-2 p,
 section#strategic-analysis ul,
 section#initiative ul {
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: left;
+}
+section#strategy-1 p,
+section#strategy-2 p {
+    text-align: center;
 }
 section#strategic-analysis ul,
 section#initiative ul {
@@ -538,8 +608,8 @@ section#initiative .cc {
 }
 
 section#initiative .cc svg {
-    width: 80px;
-    height: 80px;
+    width: 5em;
+    height: 5em;
     flex-shrink: 0;
 }
 svg.map {
@@ -605,19 +675,29 @@ svg.map path:hover {
 @media (max-width: 899px) {
     body {
         font-family: 'Archivo', serif;
-        font-size: 12px;
-    }
-
-    main {
-        padding: 10px;
+        font-size: 8px;
     }
 
     h1 {
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
-
     h2 {
-        font-size: 1.2em;
+        font-size: 1.25rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    h4 {
+        font-size: 0.9rem;
+    }
+    h5 {
+        font-size: 0.8rem;
+    }
+    h6 {
+        font-size: 0.7rem;
+    }
+    p {
+        font-size: 0.6em;
     }
 
     .pickerContainer {
@@ -646,10 +726,14 @@ svg.map path:hover {
     section#initiative ul.who-we-are li {
         margin-bottom: 1em;
     }
+
+    .cc {
+        font-size: 2em;
+    }
 }
 
 
-h1.beforeMap {
+.beforeMap {
     font-size: 2.5em;
     width:100%;
     padding-bottom: 10px;
@@ -657,7 +741,7 @@ h1.beforeMap {
 }
 
 @media (max-width: 899px) {
-    h1.beforeMap {
+    .beforeMap {
         font-size: 2em;
     }
 }
@@ -666,7 +750,7 @@ h2.recommendation {
     font-weight: inherit;
 }
 
-b.bold {
+b {
     font-weight: bold;
 }
 

@@ -84,13 +84,14 @@
         </header>
         <br>
 
-        <h1 id="map" class="beforeMap">
-            Mapa przedstawia regiony w których twój głos jest najbardziej potrzebny.
-        </h1>
-        <section>
+
+        <section id="actual-map">
+            <h5 id="map" class="beforeMap">
+                Mapa przedstawia regiony w których twój głos jest najbardziej potrzebny.
+            </h5>
             <div class="parent-element">
                 <div class="left-column">
-                    <h1>
+                    <h5>
                         <span>Chcę głosować w</span>
                         <span class="autocomplete">
                             <!--input id="nazwaOkreguInput" type="text" placeholder="okręgu"-->
@@ -99,7 +100,7 @@
                             </select>
                         </span>
                         <span>na partie:</span>
-                    </h1>
+                    </h5>
                     <div class="pickerContainer">
                         <div id="lewicaPicker">
                             <input id="lewicaCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
@@ -388,13 +389,15 @@
                     </svg>
                 </div>
             </div>
+
+            <h6 id="suggestion" class="recommendation"></h6>
+            <h6 id="suggestionStatic">
+                Jeśli nie możesz głosować strategicznie głosuj na partie pierwszego wyboru.
+                Zanim zdecydujesz się głosować w innym okręgu wyborczym, przeczytaj nasze rekomendacje na temat turystyki
+                wyborczej.
+            </h6>
         </section>
-        <h2 id="suggestion" class="recommendation"></h2>
-        <h2 id="suggestionStatic">
-            Jeśli nie możesz głosować strategicznie głosuj na partie pierwszego wyboru.
-            Zanim zdecydujesz się głosować w innym okręgu wyborczym, przeczytaj nasze rekomendacje na temat turystyki
-            wyborczej.
-        </h2>
+
 
         <section class="recommendations">
             <!--p id="recommendation" class="recommendation">Okręg 20: KO walczy z PIS o piąty mandat</p-->
@@ -409,13 +412,13 @@
             <h1 class="realistic-marker-highlight">Gdzie trzech się bije,<br>tam populista korzysta!</h1>
             <div>
                 <div class="left">
-                    <span>1 000 000<br/>głosów niebranych pod uwagę</span>
+                    <h6>1 000 000<br/>głosów niebranych pod uwagę</h6>
                 </div>
                 <div class="right">
-                    <span>30-50<br/>mandatów różnicy*</span>
-                    <span class="hint">* każdy stracony mandat<br/> to dwa mandaty różnicy</span>
+                    <h6>30-50<br/>mandatów różnicy*</h6>
                 </div>
             </div>
+            <h6 class="hint">* każdy stracony mandat to dwa mandaty różnicy</h6>
         </section>
         <section id="strategy-1">
             <h1>Strategia 1:<br/>wyważony wybór</h1>
@@ -480,7 +483,7 @@
                 <svg>
                     <use href="#cc-logo"></use>
                 </svg>
-                <p>Wszystkie nasze materiały są dostępne na licencji<br/>Creative Commons Uznanie autorstwa 4.0</p>
+                <span>Wszystkie nasze materiały są dostępne na licencji<br/>Creative Commons Uznanie autorstwa 4.0</span>
             </div>
         </section>
     </main>
