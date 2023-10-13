@@ -3,7 +3,8 @@ window.dane = {
         "nazwaOkregu": "Legnica",
         "nrOkregu": 1,
         "rekomendacjePartii": [
-            ""
+            "LEWICA",
+            "KO"
         ],
         "txt": "",
     },
@@ -11,7 +12,8 @@ window.dane = {
         "nazwaOkregu": "Wałbrzych",
         "nrOkregu": 2,
         "rekomendacjePartii": [
-            ""
+            "LEWICA",
+            "TD"
         ],
         "txt": "",
     },
@@ -19,7 +21,8 @@ window.dane = {
         "nazwaOkregu": "Wrocław",
         "nrOkregu": 3,
         "rekomendacjePartii": [
-            "KO"
+            "KO",
+            "TD"
         ],
         "txt": "Wyborcy KO powinni głosować w tym okręgu, aby być pewnym zdobycia szóstego mandatu"
     },
@@ -27,7 +30,8 @@ window.dane = {
         "nazwaOkregu": "Bydgoszcz",
         "nrOkregu": 4,
         "rekomendacjePartii": [
-            ""
+            "LEWICA",
+            "TD"
         ],
         "txt": "",
     },
@@ -35,7 +39,8 @@ window.dane = {
         "nazwaOkregu": "Toruń",
         "nrOkregu": 5,
         "rekomendacjePartii": [
-            ""
+            "LEWICA",
+            "TD"
         ],
         "txt": "",
     },
@@ -44,7 +49,7 @@ window.dane = {
         "nrOkregu": 6,
         "rekomendacjePartii": [
             "KO",
-            "LEWICA"
+            "TD"
         ],
         "txt": "Wszystkie partie opozycyjne mają szanse na kolejny mandat, W walce z PiS o ostatni mandat potrzebna jest mobilizacjia wszystkich wyborców opozycji.",
     },
@@ -52,7 +57,8 @@ window.dane = {
         "nazwaOkregu": "Chełm",
         "nrOkregu": 7,
         "rekomendacjePartii": [
-            "LEWICA"
+            "LEWICA",
+            "TD"
         ],
         "txt": "KO ze stabilnym poparciem na dwa mandaty, Trzecia Droga ze stabilnym poparciem na jeden mandat. Lewica z umiarkowanymi szansami na pierwszy mandat. Wsparcie jej potencjalnie również wyborcami Lewicy z Krosna może zwiększyć szanse na mandat. Stąd rekomendacja wsparcia Lewicy.",
     },
@@ -60,8 +66,7 @@ window.dane = {
         "nazwaOkregu": "Zielona Góra",
         "nrOkregu": 8,
         "rekomendacjePartii": [
-            "KO",
-            "TD"
+            "LEWICA"
         ],
         "txt": "Żeby zdobyć 1 mandat więcej trzeba się skupić na dwóch z trzech ugrupowaniach. Najsilniejsze wydają się KO i TD.",
     },
@@ -69,7 +74,8 @@ window.dane = {
         "nazwaOkregu": "Łódź",
         "nrOkregu": 9,
         "rekomendacjePartii": [
-            ""
+            "KO",
+            "TD"
         ],
         "txt": "",
     },
@@ -102,7 +108,7 @@ window.dane = {
         "nazwaOkregu": "Kraków",
         "nrOkregu": 13,
         "rekomendacjePartii": [
-            "LEWICA"
+            ""
         ],
         "txt": "Wyborcy Trzeciej Drogi mają stabilne poparcie na pierwszy mandat i mogą wesprzeć turystyką wyborczą walkę o mandat w Chrzanowie. Wyborcy Lewicy powinni głosować w Krakowie i walczyć o dwa mandaty. Wyborcy KO mogą wykorzystać turystykę wyborczą i wesprzeć walkę o kolejny mandat w Tarnowie.",
     },
@@ -118,7 +124,7 @@ window.dane = {
         "nazwaOkregu": "Tarnów",
         "nrOkregu": 15,
         "rekomendacjePartii": [
-            "KO"
+            "TD"
         ],
         "txt": "Trzecia droga ma pewny pierwszy mandat, KO jest najbliższa zdobycia drugiego mandatu. Wyborcy Lewicy powinni głosować w okręgu Nowy Sącz, gdzie Lewica wsparta wyborcami z Tarnowa i Chrzanowa walczy o pierwszy mandat",
     },
@@ -144,7 +150,8 @@ window.dane = {
         "nazwaOkregu": "Siedlce",
         "nrOkregu": 18,
         "rekomendacjePartii": [
-            "KO"
+            "KO",
+            "TD"
         ],
         "txt": "To jest okręg, w którym spodziewany jest największy udział wyborców, którzy przyjadą tu z Warszawy i będą to zapewne głównie wyborcy KO. Trzecia Droga zdobędzie jeden mandat, Lewica ma zbyt niskie poparcie na pierwszy mandat. Rekomendacja wsparcia KO, dla wzmocnienia efektu turystyki wyborczej.",
     },
@@ -161,7 +168,8 @@ window.dane = {
         "nazwaOkregu": "Warszawa II",
         "nrOkregu": 20,
         "rekomendacjePartii": [
-            "KO"
+            "LEWICA",
+            "TD"
         ],
         "txt": "W tym okręgu po jednym mandacie zdobędą Lewica, Trzecia Droga i Konfederacja. Pozostałe 9 podzielą KO i PiS i może zadecydować różnica jednego głosu. Wyborcy KO powinni głosować w swoim domowym okręgu. Wyborcy Lewicy mają bezpieczne poparcie zapewniające pierwszy mandat. Wyborcy Lewicy mieszkający blisko okręgu płockiego, powinny wesprzeć Lewicę w okręgu płockim.",
     },
@@ -176,7 +184,7 @@ window.dane = {
         "nazwaOkregu": "Krosno",
         "nrOkregu": 22,
         "rekomendacjePartii": [
-            "TD"
+            "KO"
         ],
         "txt": "O pierwszy mandat walczy Trzecia Droga. Lewica bez realnych szans na mandat. Jej wyborcy powinni wesprzeć okręg rzeszowski.",
     },
@@ -192,7 +200,8 @@ window.dane = {
         "nazwaOkregu": "Białystok",
         "nrOkregu": 24,
         "rekomendacjePartii": [
-            "TD"
+            "KO",
+            "LEWICA"
         ],
         "txt": "Trzecia Droga ma szanse na drugi mandat przy wsparciu turystyki wyborczej swoich wyborców z Olsztyna i Siedlec. KO i Lewica ze stabilnym poparciem.",
     },
@@ -216,8 +225,7 @@ window.dane = {
         "nazwaOkregu": "Bielsko-Biała",
         "nrOkregu": 27,
         "rekomendacjePartii": [
-            "LEWICA",
-            "TD"
+            "KO"
         ],
         "txt": "Trzecia Droga walczy o pierwszy mandat, Lewica broni pierwszego mandatu, KO ze stabilnym poparciem na 3 mandaty. Trzecia Droga może zdobyć mandat, ale żeby nie był on kosztem Lewicy a Konfederacji, Lewica również musi starać się o większą liczbę głosów. Kluczowa jest mobilizacja tych wyborców ktorzy tam są.",
     },
@@ -225,7 +233,7 @@ window.dane = {
         "nazwaOkregu": "Częstochowa",
         "nrOkregu": 28,
         "rekomendacjePartii": [
-            "TD"
+            "KO"
         ],
         "txt": "Trzecia Droga potrzebuje wsparcia pierwszego mandatu, KO i Lewica ze stabilnym wsparciem.",
     },
@@ -233,16 +241,15 @@ window.dane = {
         "nazwaOkregu": "Gliwice",
         "nrOkregu": 29,
         "rekomendacjePartii": [
-            "KO",
-            "TD"
+            "KO"
         ],
-        "txt": "KO i Trzecia Droga walczą o ostatni mandat z Konfederacją, wsparcia potrzebują obydwie partie, żeby nie walczyć w obrębie obozu demokratycznego.",
+        "txt": "KO walczy o ostatni mandat z Konfederacją.",
     },
     "Rybnik": {
         "nazwaOkregu": "Rybnik",
         "nrOkregu": 30,
         "rekomendacjePartii": [
-            "TD"
+            ""
         ],
         "txt": "Trzecia Droga ma szanse na odebranie mandatu PiS , KO ma stabilne poparcie dla 3 mandatów, Lewica z mniejszymi szansami na pierwszy mandat, niż Trzecia Droga.",
     },
@@ -250,7 +257,7 @@ window.dane = {
         "nazwaOkregu": "Katowice",
         "nrOkregu": 31,
         "rekomendacjePartii": [
-            "TD"
+            "KO"
         ],
         "txt": "KO i Lewica mają stabilne poparcie na odpowiednio piąty i pierwszy mandat. Można rozważyć wsparcie okręgu Bielsko Biała przez turystykę wyborczą.Trzecia Droga może potrzebować wsparcia pierwszego mandatu",
     },
@@ -258,15 +265,16 @@ window.dane = {
         "nazwaOkregu": "Sosnowiec",
         "nrOkregu": 32,
         "rekomendacjePartii": [
-            "KO"
+            "TD"
         ],
-        "txt": "Lewica ze stabilnym poparciem na dwa mandaty, Największe szanse na walkę z PiS i Konfederacjią o ostatni mandat ma KO",
+        "txt": "Lewica ze stabilnym poparciem na dwa mandaty, Największe szanse na walkę z PiS i Konfederacją o ostatni mandat ma KO",
     },
     "Kielce": {
         "nazwaOkregu": "Kielce",
         "nrOkregu": 33,
         "rekomendacjePartii": [
-            "KO"
+            "KO",
+            "TD"
         ],
         "txt": "Kielce jako okręg o dużej sile głosu będzie zapewne celem turystyki wyborczej motywowanej siłą głosu. Jest to okręg, gdzie konkurują Giertych na liście KO i Kaczyński na liście PiS. Lewica i Trzecia Droga mają stabilne poparcie na jeden mandat, warto wesprzeć KO, które może liczyć na dodatkowych wyborców związanych z turystyką wyborczą.",
     },
@@ -274,8 +282,7 @@ window.dane = {
         "nazwaOkregu": "Elbląg",
         "nrOkregu": 34,
         "rekomendacjePartii": [
-            "LEWICA",
-            "TD"
+            ""
         ],
         "txt": "KO ze stabilnym poparciem na 3 mandaty. Elbląg jako okręg o największej sile głosu będzie zapewne celem turystyki wyborczej motywowanej siłą głosu. Tacy wyborcy powinni wesprzeć Trzecią Drogę lub Lewicę",
     },
@@ -283,6 +290,7 @@ window.dane = {
         "nazwaOkregu": "Olsztyn",
         "nrOkregu": 35,
         "rekomendacjePartii": [
+            "KO",
             "TD"
         ],
         "txt": "Najbardziej prawdopodobny scenariusz dla Opozycji, to po jednym mandacie dla Lewicy i Trzeciej Drogi i trzy mandaty dla KO.",
@@ -307,8 +315,7 @@ window.dane = {
         "nazwaOkregu": "Piła",
         "nrOkregu": 38,
         "rekomendacjePartii": [
-            "KO",
-            "LEWICA"
+            "TD"
         ],
         "txt": "KO i Lewica mogą liczyć w sumie na pięć mandatów. Trzecia Droga ma pewny jeden mandat. Wsparcie KO lub Lewicy broni te mandaty przed Konfederacją",
     },
@@ -317,7 +324,7 @@ window.dane = {
         "nrOkregu": 39,
         "rekomendacjePartii": [
             "KO",
-            "TD"
+            "LEWICA"
         ],
         "txt": "KO lub Trzecia Droga może przegrać ostatni mandat z Konfederacją. Wyborcy KO nie powinni wyjeżdżać z Poznania. Lewica z małymi szansami na drugi mandat.",
     },
