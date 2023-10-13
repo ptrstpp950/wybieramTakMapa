@@ -11,7 +11,7 @@ window.openSocialPopup = () => {
     .forEach(el2 => el2.style.display = 'flex');
 }
 
-let seenPopup = localStorage.getItem('seenPopup') ?? false;
+let seenPopup = localStorage.getItem('seenPopup') ?? true;
 const observer = new IntersectionObserver(entries => {
   if(entries[0].isIntersecting && !seenPopup && window.scrollY > 0) {
     seenPopup = true;
