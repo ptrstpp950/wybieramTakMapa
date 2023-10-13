@@ -29,9 +29,9 @@ function recalulateMap() {
                 }
                 if (style === "") {
                     style = "none-";
-                    txtStyle = "txtWhite";
-                } else {
                     txtStyle = "txtBlack";
+                } else {
+                    txtStyle = "txtWhite";
                 }
                 style = style.substring(0, style.length - 1);
                 console.log("setting style " + style);
@@ -177,13 +177,13 @@ function setState() {
     queryString += window.party.lewica ? "" : "&lewica=0";
     queryString += window.party.td ? "" : "&td=0";
 
-    window.history.pushState("", "", queryString);    
+    window.history.pushState("", "", queryString);
 
     url = decodeURI(window.location);
 
     document.getElementById("shareFacebook").setAttribute("href", "https://www.facebook.com/sharer.php?u="+url);
     document.getElementById("shareFacebook2").setAttribute("href", "https://www.facebook.com/sharer.php?u="+url);
-    
+
     document.getElementById("shareTwitter").setAttribute("href", "https://twitter.com/intent/tweet?url="+url);
     document.getElementById("shareTwitter2").setAttribute("href", "https://twitter.com/intent/tweet?url="+url);
 
@@ -219,10 +219,10 @@ function zoomFromInput(inputValue) {
 
     if (window.zoomState.zoomIn == true)
         resetZoom();
-    
+
     window.zoomState.zoomElem = inputValue;
     selectElement("nazwaOkreguSelect", inputValue);
-    
+
     window.zoomState.zoomIn = true;
     if (window.dane[inputValue] != null) {
         var parentElementToClick = document.getElementById(window.dane[inputValue].nazwaOkregu + "Icon");
