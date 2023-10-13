@@ -13,13 +13,26 @@ window.openSocialPopup = () => {
 
 let reachedBottom = false;
 const observer = new IntersectionObserver(entries => {
-  if(entries[0].isIntersecting && !reachedBottom)
+  if(entries[0].isIntersecting && !reachedBottom && window.scrollY > 0) {
+    reachedBottom = true;
     setTimeout(() => {
-      reachedBottom = true;
       window.openSocialPopup()
-    }, 500);
+    }, 1000);
+  }
 }, {
-  threshold:1
+  threshold:0.5
 });
 
-observer.observe(document.querySelector('.who-we-are'));
+observer.observe(document.querySelector('#votes-vs-mandates'));
+
+let mapPopupOpenedOnce = false;
+document.querySelectorAll('#svgMap > a > path').forEach(path => {
+  path.addEventListener('click', () => {
+    if(!mapPopupOpenedOnce) {
+      setTimeout(()=> {
+        mapPopupOpenedOnce = true;
+        window.openSocialPopup();
+      }, 3000);
+    }
+  })
+})
