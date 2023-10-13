@@ -847,6 +847,7 @@ div.fullRecomendation{
     max-height: 50vh;
     max-width: 50vw;
     min-width: 300px;
+    min-height: 380px;
     display: flex;
     flex-direction: column;
     justify-content: center;
