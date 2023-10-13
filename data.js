@@ -68,7 +68,7 @@ window.dane = {
         "nazwaOkregu": "Piotrków Trybunalski",
         "nrOkregu": 10,
         "rekomendacjePartii": [
-            "TD",
+            "KO",
             "LEWICA"
         ]
     },
@@ -349,7 +349,7 @@ window.rekomendacje = {
     "6": "Wszystkie partie opozycyjne mają szanse na kolejny mandat, W walce z PiS o ostatni mandat potrzebna jest mobilizacjia wszystkich wyborców opozycji.",
     "7": "KO ze stabilnym poparciem na dwa mandaty, Trzecia Droga ze stabilnym poparciem na jeden mandat. Lewica z umiarkowanymi szansami na pierwszy mandat. Wsparcie jej potencjalnie również wyborcami Lewicy z Krosna może zwiększyć szanse na mandat. Stąd rekomendacja wsparcia Lewicy.",
     "8": "Żeby zdobyć 1 mandat więcej trzeba się skupić na dwóch z trzech ugrupowaniach. Najsilniejsze wydają się KO i TD.",
-    "10": "KO ze stabilnym poparciem na dwa mandaty, Lewica walczy o pierwszy mandat przy wsparciu wyborców z Radomia. Trzecia Droga może potrzebować wsparcia dla obrony pierwszego mandatu.",
+    "10": "KO, Lewica, PiS i Konfederacja. By nie stracić jednego z mandatów demokratycznych potrzebne jest wsparcie dla KO i Lewicy",
     "11": "Partie opozycyjne mają potencjał wzrostowy zależny od mobilizacji/. Najbliżej drugiego mandatu jest Trzecia Droga.",
     "13": "Wyborcy Trzeciej Drogi mają stabilne poparcie na pierwszy mandat i mogą wesprzeć turystyką wyborczą walkę o mandat w Chrzanowie. Wyborcy Lewicy powinni głosować w Krakowie i walczyć o dwa mandaty. Wyborcy KO mogą wykorzystać turystykę wyborczą i wesprzeć walkę o kolejny mandat w Tarnowie.",
     "14": "W tym okręgu rekomendujemy wsparcie Lewicy, aby wzmocnić efekt turystyki wyborczej Lewicy z okręgów Tarnów i Chrzanów.",
