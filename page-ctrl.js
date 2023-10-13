@@ -7,8 +7,8 @@ document.querySelectorAll('#share-popup-backdrop, .share-popup.content .close').
 })
 
 window.openSocialPopup = () => {
-  document.querySelectorAll('.share-popup')
-    .forEach(el2 => el2.style.display = 'flex');
+  /*document.querySelectorAll('.share-popup')
+    .forEach(el2 => el2.style.display = 'flex');*/
 }
 
 let seenPopup = localStorage.getItem('seenPopup') ?? true;
@@ -16,7 +16,7 @@ const observer = new IntersectionObserver(entries => {
   if(entries[0].isIntersecting  && !isSilenced && !seenPopup && window.scrollY > 0) {
     seenPopup = true;
     setTimeout(() => {
-      window.openSocialPopup()
+      //window.openSocialPopup()
     }, 1000);
   }
 }, {
@@ -30,7 +30,7 @@ document.querySelectorAll('#svgMap > a > path').forEach(path => {
     if(!seenPopup && !isSilenced) {
       seenPopup = true;
       setTimeout(()=> {
-        window.openSocialPopup();
+        //window.openSocialPopup();
       }, 3000);
     }
   })
