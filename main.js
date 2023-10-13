@@ -31,7 +31,7 @@ function recalulateMap() {
                     style = "none-";
                     txtStyle = "txtWhite";
                 } else {
-                    txtStyle = "txtWhite";
+                    txtStyle = "txtBlack";
                 }
                 style = style.substring(0, style.length - 1);
                 console.log("setting style " + style);
@@ -304,3 +304,8 @@ for (var i = 0; i < texts.length; i++) {
         this.parentElement.getElementsByTagName("path")[0].dispatchEvent(new Event('click'));
     });
 }
+
+
+document.getElementById("mapBackground").addEventListener("click", function (e) {
+    resetZoom();
+});
