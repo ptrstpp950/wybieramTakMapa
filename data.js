@@ -161,8 +161,7 @@ window.dane = {
             "LEWICA",
             "TD"
         ],
-        "txt": ""Warszawa I: Wyborcy KO powinni masowo zagłosować w okręgach Siedlce i Radom. Jest to strategia oparta na głosowaniu tam, gdzie jest większa siła głosu. Przy masowym wyjeździe z Warszawy do okręgu siedleckiego i radomskiego KO może stracić mandat, ale z dużym prawdopodobieństwem zostanie on przejęty przez Lewicę albo Trzecią Drogę. <br/>Część wyborców KO (mieszkańcy Bielan) powinni zagłosować w okręgu podwarszawskim dla zapewnienia piątego mandatu dla KO w tym okręgu. <br/>Wyborco Lewicy, Trzeciej Drogi, niezdecydowani lub gotowi działać strategicznie - Lewica w okręgu 19 (Warszawa) walczy o 4. mandat a Trzecia o 2. Więc jeśli chcesz to zagwarantować zagłosuj na jedną z tych partii lub wyjedź.
-"",
+        "txt": "Warszawa I: Wyborcy KO powinni masowo zagłosować w okręgach Siedlce i Radom. Jest to strategia oparta na głosowaniu tam, gdzie jest większa siła głosu. Przy masowym wyjeździe z Warszawy do okręgu siedleckiego i radomskiego KO może stracić mandat, ale z dużym prawdopodobieństwem zostanie on przejęty przez Lewicę albo Trzecią Drogę. <br/>Część wyborców KO (mieszkańcy Bielan) powinni zagłosować w okręgu podwarszawskim dla zapewnienia piątego mandatu dla KO w tym okręgu. <br/>Wyborco Lewicy, Trzeciej Drogi, niezdecydowani lub gotowi działać strategicznie - Lewica w okręgu 19 (Warszawa) walczy o 4. mandat a Trzecia o 2. Więc jeśli chcesz to zagwarantować zagłosuj na jedną z tych partii lub wyjedź.",
     },
     "Warszawa II": {
         "nazwaOkregu": "Warszawa II",
