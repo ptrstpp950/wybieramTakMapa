@@ -356,7 +356,8 @@ section#votes-vs-mandates h1 {
     z-index: 1;
     color: white;
 }
-section#votes-vs-mandates > div h6 {
+section#votes-vs-mandates > div h6,
+section#voting > div h6 {
     font-weight: bold;
     font-size: 2em;
 }
@@ -369,16 +370,21 @@ section#votes-vs-mandates h1.realistic-marker-highlight::before {
     width: 105%;
     transform: skew(5deg,2deg);
 }
-section#votes-vs-mandates > div {
+section#votes-vs-mandates > div,
+section#voting > div {
     display: flex;
     justify-content: center;
 }
 section#votes-vs-mandates div.left span:not(.hint),
-section#votes-vs-mandates div.right span:not(.hint) {
+section#votes-vs-mandates div.right span:not(.hint)
+section#voting div.left span:not(.hint),
+section#voting div.right span:not(.hint) {
     color: #333;
 }
 section#votes-vs-mandates div.left,
-section#votes-vs-mandates div.right {
+section#votes-vs-mandates div.right,
+section#voting div.left,
+section#voting div.right {
     flex: 1;
     background-color: #fff;
     height: 200px;
@@ -391,11 +397,13 @@ section#votes-vs-mandates div.right {
     padding: 25px 50px;
     z-index: 0;
 }
-section#votes-vs-mandates div.left {
+section#votes-vs-mandates div.left,
+section#voting div.left {
     margin-right: 4rem;
     z-index: 1;
 }
-section#votes-vs-mandates div.left::after {
+section#votes-vs-mandates div.left::after,
+section#voting div.left::after {
     content: '';
     position: absolute;
     right: -39px;
@@ -405,7 +413,8 @@ section#votes-vs-mandates div.left::after {
     border-left: 40px solid #fff;
 }
 
-section#votes-vs-mandates div.right::before {
+section#votes-vs-mandates div.right::before,
+section#voting div.right::before {
     content: '';
     border-top: 40px solid transparent;
     border-bottom: 40px solid transparent;
@@ -414,6 +423,9 @@ section#votes-vs-mandates div.right::before {
     left: -1px;
     z-index: 2;
 }
+section#voting div.right::before {
+    border-left-color: #e4e4e4;
+}
 section#votes-vs-mandates .hint {
     font-size: 2em;
     text-align: right;
@@ -421,32 +433,40 @@ section#votes-vs-mandates .hint {
     margin-top: 1em;
 }
 @media (max-width: 899px) {
-    section#votes-vs-mandates h1 {
+    section#votes-vs-mandates h1,
+    section#voting h1 {
         font-size: 4em;
     }
-    section#votes-vs-mandates div.left {
+    section#votes-vs-mandates div.left,
+    section#voting div.left {
         margin-right: unset;
         margin-bottom: 2em;
     }
-    section#votes-vs-mandates > div {
+    section#votes-vs-mandates > div,
+    section#voting > div {
         flex-direction: column;
     }
-    section#votes-vs-mandates > div h6 {
+    section#votes-vs-mandates > div h6,
+    section#voting > div h6 {
         font-weight: bold;
         font-size: 1.5em;
     }
     section#votes-vs-mandates div.left,
-    section#votes-vs-mandates div.right {
+    section#votes-vs-mandates div.right,
+    section#voting div.left,
+    section#voting div.right {
         font-size: 2em;
         max-width: unset;
         padding: 20px;
         flex: 0;
         min-height: 200px;
     }
-    section#votes-vs-mandates div.right h6 {
+    section#votes-vs-mandates div.right h6,
+    section#voting div.right h6 {
         margin-top: 1em;
     }
-    section#votes-vs-mandates div.left::after {
+    section#votes-vs-mandates div.left::after,
+    section#voting div.left::after {
         content: '';
         position: absolute;
         z-index: -1;
@@ -457,7 +477,8 @@ section#votes-vs-mandates .hint {
         left: unset;
         right: unset;
     }
-    section#votes-vs-mandates div.right::before {
+    section#votes-vs-mandates div.right::before,
+    section#voting div.right::before {
         border-right: 40px solid transparent;
         border-top: 40px solid #333;
         border-left: 40px solid transparent;
@@ -465,8 +486,22 @@ section#votes-vs-mandates .hint {
         left: unset;
         right: unset;
     }
+    section#voting div.right::before {
+        border-top-color: #e4e4e4;
+    }
 }
-
+section#voting {
+    background-color: #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+    font-size: 1em;
+}
+section#voting svg {
+    --logo-fill: #333;
+    max-height: 1.5em;
+}
 section#strategy-1,
 section#strategy-2 {
     font-family: "Arial", "sans-serif";
@@ -521,6 +556,7 @@ section#strategy-2 p {
 section#strategic-analysis ul,
 section#initiative ul {
     list-style: initial;
+    max-width: 90%;
 }
 section#strategic-analysis ul:not(:last-of-type),
 section#initiative ul:not(:last-of-type) {
@@ -561,17 +597,14 @@ section#initiative .inverted-logo {
 section#initiative .phone {
     white-space: nowrap;
 }
-section#initiative h1 {
-    font-size: 2.5em;
-}
-section#initiative ul.what-we-do {
-    font-size: 1.8em;
-}
 section#initiative ul.who-we-are {
     font-size: 1.3em;
     list-style: none;
     width: 100%;
     margin-bottom: 1em;
+}
+section#initiative ul.who-we-are li a {
+    font-size: 1em;
 }
 section#initiative ul.who-we-are li {
     display: flex;
@@ -687,14 +720,8 @@ svg.map path:hover {
     h3 {
         font-size: 1rem;
     }
-    h4 {
-        font-size: 0.9rem;
-    }
     h5 {
-        font-size: 0.8rem;
-    }
-    h6 {
-        font-size: 0.7rem;
+        font-size: 1.3rem;
     }
     p {
         font-size: 0.6em;
