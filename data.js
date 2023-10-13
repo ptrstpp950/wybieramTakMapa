@@ -280,6 +280,7 @@ window.dane = {
         "nazwaOkregu": "Elbląg",
         "nrOkregu": 34,
         "rekomendacjePartii": [
+            "KO",
             "LEWICA"
         ],
         "txt": "KO ze stabilnym poparciem na 3 mandaty. Elbląg jako okręg o największej sile głosu będzie zapewne celem turystyki wyborczej motywowanej siłą głosu. Tacy wyborcy powinni wesprzeć Lewicę w zdobyciu pierwszego mandatu.",
