@@ -41,6 +41,7 @@ function hideShare() {
   document.querySelectorAll('.silence-hidable').forEach(
     el => el.style.display = 'none'
   );
+  document.querySelector('.silence').style.display = 'flex';
 }
 function showShare() {
   //window.location.reload();
