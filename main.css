@@ -616,6 +616,7 @@ section#initiative ul.who-we-are li a {
 section#initiative ul.who-we-are li {
     display: flex;
     justify-content: space-between;
+    min-height: 1.6em;
 }
 section#initiative ul.who-we-are li span {
     display: flex;
@@ -855,6 +856,7 @@ div.fullRecomendation{
     max-height: 50vh;
     max-width: 50vw;
     min-width: 300px;
+    min-height: 380px;
     display: flex;
     flex-direction: column;
     justify-content: center;
