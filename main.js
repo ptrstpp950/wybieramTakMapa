@@ -13,6 +13,18 @@ function recalulateMap() {
             const txtElement = svgElement.querySelectorAll("text")[0];
             let txtStyle = "txtBlack";
 
+            const okregElement = document.getElementById("nazwaOkreguSelect");
+            let okreg = okregElement.value;
+
+            if(element.nazwaOkregu == okreg) {
+                console.log(okreg + "selected");
+                pathElement.setAttribute("class", "selected");
+            } else {
+                console.log(okreg + "selected");
+                pathElement.setAttribute("class", "not-selected");
+            }
+
+
             if (rekomendacje === null || rekomendacje === undefined || rekomendacje.length === 0) {
                 rekomendacje = [""];
             }
@@ -63,7 +75,6 @@ for (const key in window.party) {
             console.log(party + ' picker checkbox is ' + (pickerCheckbox.checked));
             window.party[party] = pickerCheckbox.checked;
             console.log(window.party);
-            recalulateMap();
             setState();
         });
     }
@@ -164,6 +175,8 @@ function hideNonNeibours(idOkregu) {
 }
 
 function setState() {
+    recalulateMap();
+    
     var queryString = "?d=12a";
     const element = document.getElementById("nazwaOkreguSelect");
     let okreg = element.value;
