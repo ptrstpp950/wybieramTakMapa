@@ -11,10 +11,10 @@ window.openSocialPopup = () => {
     .forEach(el2 => el2.style.display = 'flex');
 }
 
-let reachedBottom = false;
+let seenPopup = false;
 const observer = new IntersectionObserver(entries => {
-  if(entries[0].isIntersecting && !reachedBottom && window.scrollY > 0) {
-    reachedBottom = true;
+  if(entries[0].isIntersecting && !seenPopup && window.scrollY > 0) {
+    seenPopup = true;
     setTimeout(() => {
       window.openSocialPopup()
     }, 1000);
@@ -25,12 +25,11 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.querySelector('#votes-vs-mandates'));
 
-let mapPopupOpenedOnce = false;
 document.querySelectorAll('#svgMap > a > path').forEach(path => {
   path.addEventListener('click', () => {
-    if(!mapPopupOpenedOnce) {
+    if(!seenPopup) {
+      seenPopup = true;
       setTimeout(()=> {
-        mapPopupOpenedOnce = true;
         window.openSocialPopup();
       }, 3000);
     }
