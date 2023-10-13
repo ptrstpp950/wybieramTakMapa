@@ -344,7 +344,7 @@ h1 {
 #nazwaOkreguSelect {
     width: 250px;
     font-weight: inherit;
-    border-style: dashed;
+    border: 1px dashed #333;
 }
 
 #nazwaOkreguSelect option {
@@ -553,7 +553,7 @@ section#strategy-1 p,
 section#strategy-2 p,
 section#strategic-analysis ul,
 section#initiative ul {
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: left;
 }
 section#strategy-1 p,
@@ -812,4 +812,5 @@ div.fullRecomendation{
     justify-content: center;
     align-items: center;
     z-index: 2;
+    font-size: 2em;
   }
