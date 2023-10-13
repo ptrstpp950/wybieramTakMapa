@@ -176,7 +176,7 @@ function hideNonNeibours(idOkregu) {
 
 function setState() {
     recalulateMap();
-    
+
     var queryString = "?d=12a";
     const element = document.getElementById("nazwaOkreguSelect");
     let okreg = element.value;
