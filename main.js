@@ -182,8 +182,13 @@ function setState() {
     url = decodeURI(window.location);
 
     document.getElementById("shareFacebook").setAttribute("href", "https://www.facebook.com/sharer.php?u="+url);
+    document.getElementById("shareFacebook2").setAttribute("href", "https://www.facebook.com/sharer.php?u="+url);
+    
     document.getElementById("shareTwitter").setAttribute("href", "https://twitter.com/intent/tweet?url="+url);
+    document.getElementById("shareTwitter2").setAttribute("href", "https://twitter.com/intent/tweet?url="+url);
+
     document.getElementById("shareLinkedIn").setAttribute("href", "https://www.linkedin.com/sharing/share-offsite/?url="+url);
+    document.getElementById("shareLinkedIn2").setAttribute("href", "https://www.linkedin.com/sharing/share-offsite/?url="+url);
 
     var gEvent = {
         'okreg': (okreg == ""? "wszyscy" : okreg),
