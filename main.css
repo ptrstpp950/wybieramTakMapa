@@ -526,8 +526,8 @@ section#strategy-2 small {
     margin-top: 2em;
     font-size: 0.8em;
 }
-section#strategy-2 img,
-section#strategic-analysis img {
+section#strategy-2 svg,
+section#strategic-analysis svg {
     margin-top: 2em;
     max-width: 30%;
     margin-left: auto;
