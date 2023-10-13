@@ -227,7 +227,7 @@ function zoomFromInput(inputValue) {
         }
         zoomOnPath(parentElementToClick.getElementsByTagName("path")[0]);
         hideNonNeibours(inputValue);
-        setSuggestion(window.rekomendacje[window.dane[inputValue].nrOkregu] , window.dane[inputValue].nazwaOkregu);
+        setSuggestion(window.dane[inputValue].txt , window.dane[inputValue].nazwaOkregu);
 
     }
 }
