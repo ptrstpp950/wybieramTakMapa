@@ -207,6 +207,13 @@ main {
     top:-0.05em;
     padding:0 0.30em;
 }
+.lewica-bg {
+    background-color: var(--lewica-color);}
+.ko-bg {
+    background-color: var(--ko-color);}
+.td-bg {
+    background-color: var(--td-color);
+}
 
 header.site-header {
     background: #004494;
@@ -730,6 +737,10 @@ svg.map path:hover {
     .pickerContainer {
         flex-direction: row;
         gap: 20px;
+    }
+    .pickerContainer .legend-square {
+        width: 15px;
+        height: 15px;
     }
 
     .pickerContainer div {
