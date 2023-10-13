@@ -120,7 +120,7 @@ window.dane = {
         "rekomendacjePartii": [
             "KO"
         ],
-        "txt": "Trzecia droga ma pewny pierwszy mandat, KO jest najbliższa zdobycia drugiego mandatu. Wyborcy Lewicy powinni głosować w okręgu Nowy Sącz, gdzie Lewica wsparta wyborcami z Tarnowa i Chrzanowa walczy o pierwszy manda",
+        "txt": "Trzecia droga ma pewny pierwszy mandat, KO jest najbliższa zdobycia drugiego mandatu. Wyborcy Lewicy powinni głosować w okręgu Nowy Sącz, gdzie Lewica wsparta wyborcami z Tarnowa i Chrzanowa walczy o pierwszy mandat",
     },
     "Płock": {
         "nazwaOkregu": "Płock",
@@ -252,7 +252,7 @@ window.dane = {
         "rekomendacjePartii": [
             "TD"
         ],
-        "txt": "KO i Lewica mają stabilne poparcie na odpowiednio piąty i pierwszy mandat. Można rozważyć wsparcie okręgu Bielsko Biała przez turystykę wyborczą.Trzecia Droga może potrzebować wsparcia pierwszego mandatu",    
+        "txt": "KO i Lewica mają stabilne poparcie na odpowiednio piąty i pierwszy mandat. Można rozważyć wsparcie okręgu Bielsko Biała przez turystykę wyborczą.Trzecia Droga może potrzebować wsparcia pierwszego mandatu",
     },
     "Sosnowiec": {
         "nazwaOkregu": "Sosnowiec",
