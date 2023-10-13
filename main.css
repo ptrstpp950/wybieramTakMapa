@@ -446,7 +446,17 @@ section#detailed-recommendations .parties {
     width: 100%;
 }
 section#detailed-recommendations .parties a {
-
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#detailed-recommendations .parties a img {
+    transition: ease-in-out 100ms;
+}
+section#detailed-recommendations .parties a:hover img {
+    transform: scale(1.1);
 }
 @media (max-width: 899px) {
     section#votes-vs-mandates h1,
