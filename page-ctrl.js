@@ -13,7 +13,7 @@ window.openSocialPopup = () => {
 
 let seenPopup = localStorage.getItem('seenPopup') ?? false;
 const observer = new IntersectionObserver(entries => {
-  if(entries[0].isIntersecting && !seenPopup && window.scrollY > 0) {
+  if(entries[0].isIntersecting  && !isSilenced && !seenPopup && window.scrollY > 0) {
     seenPopup = true;
     setTimeout(() => {
       window.openSocialPopup()
@@ -27,7 +27,7 @@ observer.observe(document.querySelector('#votes-vs-mandates'));
 
 document.querySelectorAll('#svgMap > a > path').forEach(path => {
   path.addEventListener('click', () => {
-    if(!seenPopup) {
+    if(!seenPopup && !isSilenced) {
       seenPopup = true;
       setTimeout(()=> {
         window.openSocialPopup();
@@ -35,3 +35,29 @@ document.querySelectorAll('#svgMap > a > path').forEach(path => {
     }
   })
 })
+
+// silencer
+function hideShare() {
+  document.querySelectorAll('.silence-hidable').forEach(
+    el => el.style.display = 'none'
+  );
+}
+function showShare() {
+  window.location.reload();
+}
+const start = new Date('2023-10-13T23:59:59+02:00');
+const end = new Date('2023-10-15T21:00:00+02:00');
+let isSilenced = false;
+if(Date.now() <= +end) {
+  let intervalId = setInterval(() => {
+    if(Date.now() > +start && Date.now() <= +end) {
+      isSilenced = true;
+      hideShare();
+    }
+    if(Date.now()>+end && intervalId) {
+      isSilenced = false;
+      clearInterval(intervalId)
+      showShare();
+    }
+  }, 1000);
+}
