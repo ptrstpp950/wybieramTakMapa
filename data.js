@@ -203,7 +203,7 @@ window.dane = {
             "KO",
             "LEWICA"
         ],
-        "txt": "Trzecia Droga ma szanse na drugi mandat przy wsparciu turystyki wyborczej swoich wyborców z Olsztyna i Siedlec. KO i Lewica ze stabilnym poparciem.",
+        "txt": "",
     },
     "Gdańsk": {
         "nazwaOkregu": "Gdańsk",
@@ -282,9 +282,9 @@ window.dane = {
         "nazwaOkregu": "Elbląg",
         "nrOkregu": 34,
         "rekomendacjePartii": [
-            ""
+            "LEWICA"
         ],
-        "txt": "KO ze stabilnym poparciem na 3 mandaty. Elbląg jako okręg o największej sile głosu będzie zapewne celem turystyki wyborczej motywowanej siłą głosu. Tacy wyborcy powinni wesprzeć Trzecią Drogę lub Lewicę",
+        "txt": "KO ze stabilnym poparciem na 3 mandaty. Elbląg jako okręg o największej sile głosu będzie zapewne celem turystyki wyborczej motywowanej siłą głosu. Tacy wyborcy powinni wesprzeć Lewicę w zdobyciu pierwszego mandatu.",
     },
     "Olsztyn": {
         "nazwaOkregu": "Olsztyn",
