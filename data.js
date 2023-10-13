@@ -88,7 +88,7 @@ window.dane = {
         "rekomendacjePartii": [
             "TD"
         ],
-        "txt": "Partie opozycyjne mają potencjał wzrostowy zależny od mobilizacji/. Najbliżej drugiego mandatu jest Trzecia Droga.",
+        "txt": "Partie opozycyjne mają potencjał wzrostowy zależny od mobilizacji. Najbliżej drugiego mandatu jest Trzecia Droga.",
     },
     "Chrzanów": {
         "nazwaOkregu": "Chrzanów",
@@ -146,7 +146,7 @@ window.dane = {
         "rekomendacjePartii": [
             "KO"
         ],
-        "txt": "To jest okręg, w którym spodziewany jest największy udział wyborców, którzy przyjadą tu z Warszawy, będą to głównie wyborcy KO. Trzecia Droga zdobędzie jeden mandat, Lewica ma zbyt niskie poparcie na pierwszy mandat. Rekomendacja wsparcia KO, dla wzmocnienia efektu turystyki wyborczej.",
+        "txt": "To jest okręg, w którym spodziewany jest największy udział wyborców, którzy przyjadą tu z Warszawy i będą to zapewne głównie wyborcy KO. Trzecia Droga zdobędzie jeden mandat, Lewica ma zbyt niskie poparcie na pierwszy mandat. Rekomendacja wsparcia KO, dla wzmocnienia efektu turystyki wyborczej.",
     },
     "Warszawa I": {
         "nazwaOkregu": "Warszawa I",
@@ -155,7 +155,7 @@ window.dane = {
             "LEWICA",
             "TD"
         ],
-        "txt": "Wyborcy KO powinni masowo zagłosować w okręgach Siedlce i Radom. Jest to strategia oparta na głosowaniu tam, gdzie jest większa siła głosu. Przy masowym wyjeździe z Warszawy do okręgu siedleckiego i radomskiego KO może stracić mandat, ale z dużym prawdopodobieństwem zostanie on przejęty przez Lewicę albo Trzecią Drogę.<br/>Część wyborców KO (mieszkańcy Bielan) powinni zagłosować w okręgu powdarszawskim dla zapewnienia piątego mandatu dla KO w tym okręgu.<br/>Wyborco Lewicy, Trzeciej Drogi,  niezdecydowani lub gotowi działać strategicznie Lewica w okręgu 19 (Warszawa) walczą o 4. mandat a Trzecia o 2. Więc jeśli chcesz to zagwarantować zagłosuj na jedną z tych partii lub wyjedź.<br/>W Radomiu i Płocku potrzeba wyborców Trzeciej Drogi, by zapewnić mandaty.<br/>W Płocku potrzeba wyborców Lewicy, by zapewnić mandat",
+        "txt": "Wyborcy KO powinni masowo zagłosować w okręgach Siedlce i Radom. Jest to strategia oparta na głosowaniu tam, gdzie jest większa siła głosu. Przy masowym wyjeździe z Warszawy do okręgu siedleckiego i radomskiego KO może stracić mandat, ale z dużym prawdopodobieństwem zostanie on przejęty przez Lewicę albo Trzecią Drogę.<br/>Część wyborców KO (mieszkańcy Bielan) powinni zagłosować w okręgu podwarszawskim dla zapewnienia piątego mandatu dla KO w tym okręgu.<br/>Wyborco Lewicy, Trzeciej Drogi, niezdecydowani lub gotowi działać strategicznie - Lewica w okręgu 19 (Warszawa) walczy o 4. mandat a Trzecia o 2. Więc jeśli chcesz to zagwarantować zagłosuj na jedną z tych partii lub wyjedź.<br/>W Radomiu i Płocku potrzeba wyborców Trzeciej Drogi, by zapewnić mandaty.<br/>W Płocku potrzeba wyborców Lewicy, by zapewnić mandat",
     },
     "Warszawa II": {
         "nazwaOkregu": "Warszawa II",
@@ -219,7 +219,7 @@ window.dane = {
             "LEWICA",
             "TD"
         ],
-        "txt": "Trzecia Doga walczy o pierwszy mandat, Lewica broni pierwszego mandatu, KO ze stabilnym poparciem na 3 mandaty. Trzecia Droga może zdobyć mandat, ale żeby nie był on kosztm Lewicy a Konfederacji, Lewica również musi starać się o większą liczbę głosów. Kluczowa jest mobilizacja tych wyborców ktorzy tam są.",
+        "txt": "Trzecia Droga walczy o pierwszy mandat, Lewica broni pierwszego mandatu, KO ze stabilnym poparciem na 3 mandaty. Trzecia Droga może zdobyć mandat, ale żeby nie był on kosztem Lewicy a Konfederacji, Lewica również musi starać się o większą liczbę głosów. Kluczowa jest mobilizacja tych wyborców ktorzy tam są.",
     },
     "Częstochowa": {
         "nazwaOkregu": "Częstochowa",
@@ -236,7 +236,7 @@ window.dane = {
             "KO",
             "TD"
         ],
-        "txt": "KO i Trzecia Droga walczą o ostatni mandat z Konfederacjią, wsparcia potrzebują obydwie partie, żeby nie walczyć w obrębie obozu demokratycznego.",
+        "txt": "KO i Trzecia Droga walczą o ostatni mandat z Konfederacją, wsparcia potrzebują obydwie partie, żeby nie walczyć w obrębie obozu demokratycznego.",
     },
     "Rybnik": {
         "nazwaOkregu": "Rybnik",
@@ -244,7 +244,7 @@ window.dane = {
         "rekomendacjePartii": [
             "TD"
         ],
-        "txt": "Trzecia Droga ma szanse na odebranie mandatu PiS , KO ma stablilne poparcie dla 3 mandatów, Lewica z mniejszymi szansami na pierwszy mandat, niż Trzecia Droga.",
+        "txt": "Trzecia Droga ma szanse na odebranie mandatu PiS , KO ma stabilne poparcie dla 3 mandatów, Lewica z mniejszymi szansami na pierwszy mandat, niż Trzecia Droga.",
     },
     "Katowice": {
         "nazwaOkregu": "Katowice",
