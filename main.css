@@ -818,3 +818,66 @@ div.fullRecomendation{
     z-index: 2;
     font-size: 2em;
   }
+.shareButtons h3 {margin: 0;}
+
+.share-popup-backdrop {
+    background: rgba(94, 94, 94, 0.95);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.share-popup.content {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    max-height: 350px;
+    max-width: 50vw;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.share-popup.content .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+.share-popup.content .close:hover {
+    opacity: 1;
+}
+.share-popup.content  .close:before, .share-popup.content  .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.share-popup.content  .close:before {
+    transform: rotate(45deg);
+}
+.share-popup.content  .close:after {
+    transform: rotate(-45deg);
+}
+
+.share-popup .share-btn {
+    font-size: 4em;
+}
