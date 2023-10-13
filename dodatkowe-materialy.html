@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodatkowe materiały</title>
+    <style>
+        body{ background: #333; color: #ccc
+        }
+        /* List */
+        ul {
+            counter-reset: index;
+            padding: 0;
+            max-width: 300px;
+        }
+
+        /* List element */
+        li {
+            counter-increment: index;
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            box-sizing: border-box;
+        }
+        li a {
+            color: #ccc;
+        }
+
+
+        /* Element counter */
+        li::before {
+            content: counters(index, ".", decimal-leading-zero);
+            font-size: 1.5rem;
+            text-align: right;
+            font-weight: bold;
+            min-width: 50px;
+            padding-right: 12px;
+            font-variant-numeric: tabular-nums;
+            align-self: flex-start;
+            background-image: linear-gradient(to bottom, aquamarine, orangered);
+            background-attachment: fixed;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        /* Element separation */
+        li + li {
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+    </style>
+</head>
+<body>
+<h1>Tu możesz dowiedzieć się więcej o wyborach:</h1>
+<ul id="links" class="gradient-list">
+
+</ul>
+<script>
+  const links = [
+    ['Praktyczny Poradnik Wyborczy	', 'https://obywatele.news/author/michalmmajewski/',],
+    ['metoda d\'Hondta	', 'https://www.rp.pl/polityka/art9175891-wybory-parlamentarne-na-czym-polega-metoda-d-hondta',],
+    ['metoda d\'Hondta	', 'https://www.prawo.pl/samorzad/metoda-dhondta-na-czym-polega,523036.html',],
+    ['okręgi wyborcze	', 'https://wybory.gov.pl/sejmsenat2023/pl/sejm/okregi',],
+    ['okręgi wyborcze	', 'https://i.pl/okregi-wyborcze-w-polsce-czym-sa-i-co-warto-o-nich-wiedziec/ar/c1-17124355',],
+    ['nierównosci w okręgach	', 'https://oko.press/rozklad-mandatow-miedzy-okregi-wyborcze-jest-niesprawiedliwy',],
+    ['nierównosci w okręgach	', 'https://www.bankier.pl/wiadomosc/Topowe-okregi-PiS-u-powinny-miec-mniej-mandatow-Partia-nie-uwzglednila-pisma-PKW-8621135.html',],
+    ['lokomotywy wyborcze	', 'https://mamprawowiedziec.pl/czytelnia/artykul/jedynki-i-lokomotywy-wyborcze',],
+    ['jak działa przeliczanie głosów	', 'https://demagog.org.pl/analizy_i_raporty/jak-dziala-przeliczanie-glosow-na-mandaty-w-wyborach/',],
+    ['ważny głos	', 'https://oko.press/jak-oddac-wazny-glos-i-co-on-oznacza-instrukcja-obslugi-wyborow',],
+    ['refendrum	', 'https://www.infor.pl/prawo/nowosci-prawne/6336972,referendum-w-polsce-2023-r-waznosc-zasady-wymogi-ogloszenie-wyni.html',],
+    ['ABC głosowania	', 'https://www.prawo.pl/samorzad/jak-oddac-wazny-glos-w-wyborach-do-sejmu-i-senatu,523465.html',],
+    ['ważny głos	', 'https://www.bipraciborz.pl/res/serwisy/pliki/19441985?version=1.0',],
+    ['na kogo zagłosować	', 'https://mamprawowiedziec.pl/politycy',],
+  ]
+  const ul = document.querySelector('ul#links');
+  links.forEach(([title, url]) => {
+    const link = document.createElement('li');
+    link.innerHTML = `<a href="${url}" target="_blank" >${title}</a>`;
+    ul.appendChild(link);
+  })
+</script>
+</body>
+</html>
