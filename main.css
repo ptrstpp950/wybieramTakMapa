@@ -616,6 +616,7 @@ section#initiative ul.who-we-are li a {
 section#initiative ul.who-we-are li {
     display: flex;
     justify-content: space-between;
+    min-height: 1.6em;
 }
 section#initiative ul.who-we-are li span {
     display: flex;
