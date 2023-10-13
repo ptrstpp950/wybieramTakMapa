@@ -148,7 +148,6 @@ window.dane = {
         "nazwaOkregu": "Opole",
         "nrOkregu": 21,
         "rekomendacjePartii": [
-            "TD"
         ]
     },
     "Krosno": {
@@ -360,7 +359,6 @@ window.rekomendacje = {
     "18": "To jest okręg, w którym spodziewany jest największy udział wyborców, którzy przyjadą tu z Warszawy, będą to głównie wyborcy KO. Trzecia Droga zdobędzie jeden mandat, Lewica ma zbyt niskie poparcie na pierwszy mandat. Rekomendacja wsparcia KO, dla wzmocnienia efektu turystyki wyborczej.",
     "19": "Wyborcy KO powinni masowo zagłosować w okręgach Siedlce i Radom. Jest to strategia oparta na głosowaniu tam, gdzie jest większa siła głosu. Przy masowym wyjeździe z Warszawy do okręgu siedleckiego i radomskiego KO może stracić mandat, ale z dużym prawdopodobieństwem zostanie on przejęty przez Lewicę albo Trzecią Drogę. Część wyborców KO (mieszkańcy Bielan) powinni zagłosować w okręgu powdarszawskim dla zapewnienia piątego mandatu dla KO w tym okręgu. Wyborcy Lewicy walczą o trzeci mandat i powinni głosować w Warszawie. Wyborcy Trzeciej Drogi powinni częściowo rozważyć wyjazd do Radomia.",
     "20": "W tym okręgu po jednym mandacie zdobędą Lewica, Trzecia Droga i Konfederacja. Pozostałe 9 podzielą KO i PiS i może zadecydować różnica jednego głosu. Wyborcy KO powinni głosować w swoim domowym okręgu. Wyborcy Lewicy mają bezpieczne poparcie zapewniające pierwszy mandat. Wyborcy Lewicy mieszkający blisko okręgu płockiego, powinny wesprzeć Lewicę w okręgu płockim.",
-    "21": "Bez rekomendacji.",
     "22": "O pierwszy mandat walczy Trzecia Droga. Lewica bez realnych szans na mandat. Jej wyborcy powinni wesprzeć okręg rzeszowski.",
     "23": "Lewica walczy o mandat przy wsparciu turystyki wyborczej z Krosna, Pozostałe partie ze stabilnym poparciem.",
     "24": "Trzecia Droga ma szanse na drugi mandat przy wsparciu turystyki wyborczej swoich wyborców z Olsztyna i Siedlec. KO i Lewica ze stabilnym poparciem.",
