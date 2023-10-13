@@ -710,6 +710,10 @@ svg.map path:hover {
 }
 
 
+.pickerContainer .legend-square {
+    width: 20px;
+    height: 20px;
+}
 
 /* Media query for screen sizes less than 900px */
 @media (max-width: 899px) {
