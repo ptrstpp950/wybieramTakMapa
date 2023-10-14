@@ -106,18 +106,31 @@ input[type="checkbox"] {
 
     font: inherit;
     color: currentColor;
-    width: 1em;
-    height: 1em;
+    width: 2em;
+    height: 2em; /* overwritten by flex basis anyway */
     border: 1px solid currentColor;
     border-radius: 2px;
 
     display: grid;
     place-content: center;
+    margin-right: 1em;
 }
 
 input[type="checkbox"]:checked {
     background-color: var(--form-control-background);
     border: 1px solid var(--form-control-background);
+}
+input.lewica-bg[type="checkbox"]:checked {
+    border: 1px solid var(--lewica-color);
+    background-color: var(--lewica-color);
+}
+input.ko-bg[type="checkbox"]:checked {
+    border: 1px solid var(--ko-color);
+    background-color: var(--ko-color);
+}
+input.td-bg[type="checkbox"]:checked {
+    border: 1px solid var(--td-color);
+    background-color: var(--td-color);
 }
 
 input[type="checkbox"]::before {
@@ -135,6 +148,106 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
     transform: scale(1);
+}
+#lewicaPicker,
+#koPicker,
+#tdPicker {
+    position: relative;
+}
+
+#lewicaPicker input[type="checkbox"]::after,
+#koPicker input[type="checkbox"]::after,
+#tdPicker input[type="checkbox"]::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.pickerContainer .pickerLogo {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+}
+@media (max-width: 899px) {
+    input[type="checkbox"]::before {
+        width: 1.25em;
+        height: 1.25em;
+    }
+    input[type="checkbox"] {
+        margin: 0;
+    }
+    .pickerContainer > div {
+        justify-content: space-between;
+        width: 33%;
+    }
+    .pickerLogo {
+        width: 100%;
+        height: auto;
+        max-height: 60px;
+        margin-top: 0.5em;
+        padding-top: 0.5em;
+    }
+
+    .pickerContainer > div > input[type="checkbox"]::after {
+        background: linear-gradient(180deg, var(--color) 0%, var(--color) 42%, var(--color-faded) 42%, var(--color-faded) 100%);
+    }
+}
+
+input[type="checkbox"]::after {
+    --color: #8e8e8e;
+    --color-faded: #d2d2d2;
+    background: linear-gradient(90deg, var(--color) 0%, var(--color) 22%, var(--color-faded) 22%, var(--color-faded) 100%);
+}
+#lewicaPicker input[type="checkbox"]:checked::after {
+    --color: var(--lewica-color);
+    --color-faded: rgb(167, 18, 86, 40%);
+}
+#koPicker input[type="checkbox"]:checked::after {
+    --color: var(--ko-color);
+    --color-faded: rgb(2, 70, 143, 40%);
+}
+#tdPicker input[type="checkbox"]:checked::after {
+    --color: var(--td-color);
+    --color-faded: rgb(60, 176, 53, 40%);
+}
+
+
+.pickerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pickerContainer > div {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5em;
+    height: 3em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.pickerCheckbox {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 2em;
+}
+
+.pickerCheckbox:not(:checked)~.pickerLogo {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 html,
@@ -302,39 +415,6 @@ section#actual-map, section.recommendations, section.bottom-info{
 
 
 
-.pickerContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.pickerContainer div {
-    font-size: 1.5em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 0.5em;
-}
-
-.pickerCheckbox {
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 1em;
-}
-
-.pickerLogo {
-    width: 150px;
-}
-
-.pickerCheckbox:not(:checked)~.pickerLogo {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
 h1 {
     display: flex;
     flex-wrap: wrap;
@@ -454,11 +534,15 @@ section#detailed-recommendations .parties a {
 }
 section#detailed-recommendations .parties a img {
     transition: ease-in-out 100ms;
+    width: 150px;
 }
 section#detailed-recommendations .parties a:hover img {
     transform: scale(1.1);
 }
 @media (max-width: 899px) {
+    section#detailed-recommendations .parties {
+        flex-direction: column;
+    }
     section#votes-vs-mandates h1,
     section#voting h1 {
         font-size: 4em;
@@ -781,6 +865,7 @@ svg.map path:hover {
 
     .pickerContainer {
         flex-direction: row;
+        justify-content: center;
         gap: 20px;
     }
     .pickerContainer .legend-square {
@@ -788,12 +873,10 @@ svg.map path:hover {
         height: 15px;
     }
 
-    .pickerContainer div {
+    .pickerContainer > div {
         font-size: 1em;
-    }
-
-    .pickerLogo {
-        width: 70px;
+        flex-direction: column;
+        height: auto;
     }
 
     /* Change the flex direction to column */

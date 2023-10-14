@@ -6,9 +6,9 @@ document.querySelectorAll('#share-popup-backdrop, .share-popup.content .close').
   })
 })
 
-window.openSocialPopup = () => {
-  /*document.querySelectorAll('.share-popup')
-    .forEach(el2 => el2.style.display = 'flex');*/
+const openSocialPopup = () => {
+  document.querySelectorAll('.share-popup')
+    .forEach(el2 => el2.style.display = 'flex');
 }
 
 let seenPopup = localStorage.getItem('seenPopup') ?? true;
@@ -16,7 +16,7 @@ const observer = new IntersectionObserver(entries => {
   if(entries[0].isIntersecting  && !isSilenced && !seenPopup && window.scrollY > 0) {
     seenPopup = true;
     setTimeout(() => {
-      //window.openSocialPopup()
+      openSocialPopup()
     }, 1000);
   }
 }, {
@@ -30,7 +30,7 @@ document.querySelectorAll('#svgMap > a > path').forEach(path => {
     if(!seenPopup && !isSilenced) {
       seenPopup = true;
       setTimeout(()=> {
-        //window.openSocialPopup();
+        openSocialPopup();
       }, 3000);
     }
   })
@@ -44,11 +44,11 @@ function hideShare() {
   document.querySelector('.silence').style.display = 'flex';
 }
 function showShare() {
-  //window.location.reload();
+  window.location.reload();
 }
 const start = new Date('2023-10-13T23:59:59+02:00');
 const end = new Date('2023-10-15T21:00:00+02:00');
-let isSilenced = true;
+let isSilenced = false;
 if(Date.now() <= +end) {
   let intervalId = setInterval(() => {
     if(Date.now() > +start && Date.now() <= +end) {

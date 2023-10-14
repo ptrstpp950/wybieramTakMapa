@@ -87,7 +87,7 @@
 
         <section id="actual-map">
             <h5 id="map" class="beforeMap">
-                Mapa przedstawia regiony w których twój głos jest najbardziej potrzebny.
+                Mapa przedstawia regiony, w których Twój głos jest najbardziej potrzebny.<br/> Wybierz na kogo jesteś gotowy(a) głosować?
             </h5>
             <div class="parent-element">
                 <div class="left-column">
@@ -103,32 +103,20 @@
                     </h5>
                     <div class="pickerContainer">
                         <div id="lewicaPicker">
-                            <input id="lewicaCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
-                            <div class="lewica-bg legend-square"></div>
+                            <input id="lewicaCheckbox" class="lewica-bg pickerCheckbox" type="checkbox" checked="" />
+<!--                            <div class="lewica-bg legend-square"></div>-->
                             <img class="pickerLogo" src="img/lewica.svg" />
                         </div>
-                        <!--div class="fullRecomendation">
-                            <a href="pdf/Rekomendacje turystyki wyborczej Lewica 11.10.2023.pdf?v=20231011a"
-                                target="_blank">
-                                Aktualne rekomendacje dla Lewicy
-                            </a>
-                        </div-->
                         <div id="koPicker">
-                            <input id="koCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
-                            <div class="ko-bg legend-square"></div>
+                            <input id="koCheckbox" class="ko-bg pickerCheckbox" type="checkbox" checked="" />
+<!--                            <div class="ko-bg legend-square"></div>-->
                             <img class="pickerLogo" src="img/ko.svg" />
                         </div>
-                        <!--div class="fullRecomendation">
-                            Aktualne rekomendacje KO - wkrótce
-                        </div-->
                         <div id="tdPicker">
-                            <input id="tdCheckbox" class="pickerCheckbox" type="checkbox" checked="" />
-                            <div class="td-bg legend-square"></div>
+                            <input id="tdCheckbox" class="td-bg pickerCheckbox" type="checkbox" checked="" />
+<!--                            <div class="td-bg legend-square"></div>-->
                             <img class="pickerLogo" src="img/td.png" />
                         </div>
-                        <!--div class="fullRecomendation">
-                            Aktualne rekomendacje TD - wkrótce
-                        </div-->
                     </div>
                 </div>
                 <div class="map right-column">
@@ -579,12 +567,11 @@
     </div>
 
     <script src="main.js?v=20231011a"></script>
-    <!--script src="page-ctrl.js"></script>
-    <script>
+    <script src="page-ctrl.js">
       window.onbeforeunload = function () {
         window.scrollTo(0, 0);
       }
-    </script-->
+    </script>
 </body>
 
 </html>
