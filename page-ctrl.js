@@ -48,7 +48,8 @@ function showShare() {
 }
 const start = new Date('2023-10-13T23:59:59+02:00');
 const end = new Date('2023-10-15T21:00:00+02:00');
-let isSilenced = false;
+let isSilenced = true;
+hideShare();
 if(Date.now() <= +end) {
   let intervalId = setInterval(() => {
     if(Date.now() > +start && Date.now() <= +end) {
