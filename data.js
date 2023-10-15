@@ -341,7 +341,7 @@ window.dane = {
         "rekomendacjePartii": [
             "KO"
         ],
-        "txt": "Lewica i Trzecia Droga mają niewielką szansę na zdobycie kolejnego mandatu. JedynieKO może nawiązać walkę, gdyż może być niedoszacowana dlatego należy ją wesprzeć. Lokalny spór polityczny może doprowadzić do większego poparcia dla KO niż to wynika z rachunków.",
+        "txt": "Lewica i Trzecia Droga mają niewielką szansę na zdobycie kolejnego mandatu. Jedynie KO może nawiązać walkę, gdyż może być niedoszacowana dlatego należy ją wesprzeć. Lokalny spór polityczny może doprowadzić do większego poparcia dla KO niż to wynika z rachunków.",
     }
 }
 
